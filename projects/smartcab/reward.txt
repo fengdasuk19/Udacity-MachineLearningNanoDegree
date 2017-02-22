@@ -1,0 +1,417 @@
+
+/-------------------------
+| Training trial 1
+\-------------------------
+
+Simulating trial. . . 
+Agent not set to learn.
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.23)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.06)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.95)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.75)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.05)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.52)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.31)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.33)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.24)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.93)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.89)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.56)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.23)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.27)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.96)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.81)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.24)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.35)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.89)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.16)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 20 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.51)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 21 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.00)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 22 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.24)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 23 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.18)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 24 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.09)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 25 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with oncoming traffic. (rewarded 0.92)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 26 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.23)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 27 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.35)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 28 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.37)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 29 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.40)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 30 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.73)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 31 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.42)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 32 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with oncoming traffic. (rewarded 1.86)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 33 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with oncoming traffic. (rewarded 0.22)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 34 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.93)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 35 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.01)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 36 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.47)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 37 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.04)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 38 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.12)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 39 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.90)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 40 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.99)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 41 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.30)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 42 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.87)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 43 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.23)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 44 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.92)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 45 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.24)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 46 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.02)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 47 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 1.52)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 48 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent properly idled at a red light. (rewarded 2.44)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 49 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -4.88)
+Agent not enforced to meet deadline.
+
+/-------------------
+| Step 50 Results
+\-------------------
+
+!! Agent state not been updated!
+Agent idled at a green light with no oncoming traffic. (rewarded -5.38)
+Agent not enforced to meet deadline.
+
+Simulation ended. . . 
