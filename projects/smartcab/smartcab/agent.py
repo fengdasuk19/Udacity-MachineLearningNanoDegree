@@ -104,11 +104,14 @@ class LearningAgent(Agent):
         # When learning, choose a random action with 'epsilon' probability
         #   Otherwise, choose an action with the highest Q-value for the current state
         
-        if (False == self.learning):
-            action = self.valid_actions[random.randint(0, 3)]
+        if ((True == self.learning) && (random.random() <= (1 - self.epsilon))):
+            action = self.Q[state].keys()[0]
+            for theAction in self.Q[state].keys():
+                if (self.Q[state][theAction] > self.Q[state][action]):
+                    action = theAction
         else:
-            print "start to learn and then act"
- 
+            action = self.valid_actions[random.randint(0, 3)]
+            
         return action
 
 
