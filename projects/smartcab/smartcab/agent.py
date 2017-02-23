@@ -47,8 +47,8 @@ class LearningAgent(Agent):
             self.epsilon = 0
             self.alpha = 0
         else:
-            trialFactor = 0.5
-            self.epsilon = 1.0 / math.pow(self.trial, 4) # -= (1.0 / 1000)#
+            trialFactor = 1.0 / 2
+            self.epsilon = math.pow(trialFactor, self.trial) #1.0 / math.pow(self.trial, 2) # -= (1.0 / 1000)#
 
         return None
 
@@ -217,7 +217,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=1000, tolerance=(1.0 / math.pow(950, 4)))
+    sim.run(n_test=1000, tolerance=(math.pow(1.0/2, 950)))
 
 
 if __name__ == '__main__':
