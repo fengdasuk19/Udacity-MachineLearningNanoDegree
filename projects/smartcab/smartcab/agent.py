@@ -47,8 +47,8 @@ class LearningAgent(Agent):
             self.epsilon = 0
             self.alpha = 0
         else:
-            trialFactor = 1.0 / 2
-            self.epsilon = math.pow(trialFactor, self.trial) #1.0 / math.pow(self.trial, 2) # -= (1.0 / 1000)#
+            #trialFactor = 1.0 / 2.19
+            self.epsilon = math.pow(self.trial, -2) #1.0 / math.pow(self.trial, 2) # -= (1.0 / 1000)#
 
         return None
 
@@ -210,14 +210,14 @@ def run():
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env, update_delay=0.0001, log_metrics=True, optimized=True)
+    sim = Simulator(env, display=False, update_delay=0.0001, log_metrics=True, optimized=True)
     
     ##############
     # Run the simulator
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=1000, tolerance=(math.pow(1.0/2, 950)))
+    sim.run(n_test=1000, tolerance=(math.pow(1.0/950, 2)))
 
 
 if __name__ == '__main__':
