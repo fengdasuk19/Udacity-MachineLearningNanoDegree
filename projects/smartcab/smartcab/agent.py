@@ -1,5 +1,6 @@
 import random
 import math
+import sys
 from environment import Agent, Environment
 from planner import RoutePlanner
 from simulator import Simulator
@@ -39,6 +40,11 @@ class LearningAgent(Agent):
         # Update epsilon using a decay function of your choice
         # Update additional class parameters as needed
         # If 'testing' is True, set epsilon and alpha to 0
+        if (True == testing):
+            self.epsilon = 0
+            self.alpha = 0
+        else:
+            self.epsilon -= 0.05
 
         return None
 
@@ -70,8 +76,26 @@ class LearningAgent(Agent):
         ###########
         # Calculate the maximum Q-value of all actions for a given state
 
-        maxQ = None
+        maxQ = -sys.maxint-1 # maxQ for Q(s', a')
 
+        # The direction(waypoint) choose last time, is the direction now
+        # To change the state at the moment, we should only change the waypoint of the state
+        # ###Include them in a list named stateNextList
+        # ###No need to do so.
+        # ###We can compare the corresponding Q-value directly.
+        # Each of them is a state[s'] that can be reached from the state[s] through an action[a]
+        
+        #stateNextList = []
+        for theAction in self.valid_actions:
+            stateNextUnit = list(state)
+            stateNextUnit[0] = theAction
+            stateNextUnit = tuple(stateNextUnit)
+            #stateNextList.append(stateNextUnit)
+            if (stateNextUnit in self.Q.keys()):
+                for ii in self.Q[stateNextUnit].keys():
+                    if (self.Q[stateNextUnit][ii] > maxQ):
+                        maxQ = self.Q[stateNextUnit][ii]
+        
         return maxQ 
 
 
@@ -84,6 +108,10 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
+        if not (state in self.Q.keys()):
+            self.Q[state] = {}
+            for theAction in self.valid_actions:
+                self.Q[state][theAction] = 0.0
 
         return
 
@@ -125,6 +153,8 @@ class LearningAgent(Agent):
         ###########
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
+        
+        self.Q[state][action] = (1 - self.alpha) * self.Q[state][action] + self.alpha * (reward + get_maxQ(state))
 
         return
 
