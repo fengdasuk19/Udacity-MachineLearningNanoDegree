@@ -1,0 +1,3135 @@
+
+/-------------------------
+| Training trial 1
+\-------------------------
+
+Environment.reset(): Trial set up with start = (1, 6), destination = (4, 4), deadline = 25
+Simulating trial. . . 
+epsilon = 0.9961; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (1, 6), heading: (1, 0), action: left, reward: -19.383602465
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'right', 'right': 'forward', 'left': 'forward'}, 'violation': 3, 'light': 'green', 'state': ('forward', 'green', 'right', 'forward', 'forward'), 'deadline': 25, 't': 0, 'action': 'left', 'reward': -19.383602465043264, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'right', 'forward', 'forward')
+Agent attempted driving left through traffic and cause a minor accident. (rewarded -19.38)
+96% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (1, 6), heading: (1, 0), action: None, reward: -5.09654935273
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': 'forward'}, 'violation': 1, 'light': 'green', 'state': ('forward', 'green', None, 'forward', 'forward'), 'deadline': 24, 't': 1, 'action': None, 'reward': -5.09654935273425, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, 'forward', 'forward')
+Agent idled at a green light with no oncoming traffic. (rewarded -5.10)
+92% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (2, 6), heading: (1, 0), action: forward, reward: 0.978739647607
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, 'forward', 'forward'), 'deadline': 23, 't': 2, 'action': 'forward', 'reward': 0.9787396476066386, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, 'forward', 'forward')
+Agent followed the waypoint forward. (rewarded 0.98)
+88% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (2, 5), heading: (0, -1), action: left, reward: 0.287553603879
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'left', None, None), 'deadline': 22, 't': 3, 'action': 'left', 'reward': 0.2875536038790383, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'left', None, None)
+Agent drove left instead of forward. (rewarded 0.29)
+84% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (3, 5), heading: (1, 0), action: right, reward: 1.51871882653
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 21, 't': 4, 'action': 'right', 'reward': 1.5187188265313771, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent followed the waypoint right. (rewarded 1.52)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (4, 5), heading: (1, 0), action: forward, reward: 1.45807287522
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, 'forward', 'forward'), 'deadline': 20, 't': 5, 'action': 'forward', 'reward': 1.4580728752154963, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, 'forward', 'forward')
+Agent followed the waypoint forward. (rewarded 1.46)
+76% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (4, 5), heading: (1, 0), action: left, reward: -40.5856922968
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 4, 'light': 'red', 'state': ('left', 'red', None, None, 'forward'), 'deadline': 19, 't': 6, 'action': 'left', 'reward': -40.585692296762765, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, 'forward')
+Agent attempted driving left through a red light with traffic and cause a major accident. (rewarded -40.59)
+72% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (4, 5), heading: (1, 0), action: left, reward: -40.9574681255
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 4, 'light': 'red', 'state': ('left', 'red', None, None, 'forward'), 'deadline': 18, 't': 7, 'action': 'left', 'reward': -40.957468125514524, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, 'forward')
+Agent attempted driving left through a red light with traffic and cause a major accident. (rewarded -40.96)
+68% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (4, 5), heading: (1, 0), action: left, reward: -10.6959649616
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 17, 't': 8, 'action': 'left', 'reward': -10.695964961561348, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -10.70)
+64% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (5, 5), heading: (1, 0), action: forward, reward: 0.506074941299
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, None), 'deadline': 16, 't': 9, 'action': 'forward', 'reward': 0.5060749412991361, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, None)
+Agent drove forward instead of left. (rewarded 0.51)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (5, 5), heading: (1, 0), action: right, reward: -19.2141372849
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 3, 'light': 'red', 'state': ('left', 'red', None, 'forward', None), 'deadline': 15, 't': 10, 'action': 'right', 'reward': -19.214137284928984, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, 'forward', None)
+Agent attempted driving right through traffic and cause a minor accident. (rewarded -19.21)
+56% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (5, 5), heading: (1, 0), action: right, reward: -20.3808877467
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 3, 'light': 'red', 'state': ('left', 'red', None, 'forward', None), 'deadline': 14, 't': 11, 'action': 'right', 'reward': -20.380887746658125, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, 'forward', None)
+Agent attempted driving right through traffic and cause a minor accident. (rewarded -20.38)
+52% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (5, 5), heading: (1, 0), action: None, reward: 0.822178456477
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 13, 't': 12, 'action': None, 'reward': 0.8221784564766292, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent properly idled at a red light. (rewarded 0.82)
+48% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (5, 6), heading: (0, 1), action: right, reward: 1.73187354922
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, 'left'), 'deadline': 12, 't': 13, 'action': 'right', 'reward': 1.731873549222885, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, 'left')
+Agent drove right instead of left. (rewarded 1.73)
+44% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (6, 6), heading: (1, 0), action: left, reward: -0.114417572281
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'right'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, 'right', None), 'deadline': 11, 't': 14, 'action': 'left', 'reward': -0.11441757228070981, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, 'right', None)
+Agent drove left instead of right. (rewarded -0.11)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (6, 6), heading: (1, 0), action: None, reward: 1.27043749773
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'right'}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, 'right', None), 'deadline': 10, 't': 15, 'action': None, 'reward': 1.2704374977263693, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, 'right', None)
+Agent properly idled at a red light. (rewarded 1.27)
+36% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (6, 7), heading: (0, 1), action: right, reward: 0.270974279489
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', 'left', None, None), 'deadline': 9, 't': 16, 'action': 'right', 'reward': 0.2709742794891029, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'left', None, None)
+Agent drove right instead of left. (rewarded 0.27)
+32% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (6, 7), heading: (0, 1), action: left, reward: -40.1584993103
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': 'forward'}, 'violation': 4, 'light': 'red', 'state': ('right', 'red', None, 'forward', 'left'), 'deadline': 8, 't': 17, 'action': 'left', 'reward': -40.15849931028719, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'forward', 'left')
+Agent attempted driving left through a red light with traffic and cause a major accident. (rewarded -40.16)
+28% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (6, 7), heading: (0, 1), action: None, reward: 2.07315795128
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, 'left', 'left'), 'deadline': 7, 't': 18, 'action': None, 'reward': 2.0731579512754674, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'left', 'left')
+Agent properly idled at a red light. (rewarded 2.07)
+24% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (6, 7), heading: (0, 1), action: left, reward: -10.1720016962
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 6, 't': 19, 'action': 'left', 'reward': -10.172001696200915, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -10.17)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 20 Results
+\-------------------
+
+Environment.step(): t = 20
+Environment.act() [POST]: location: (6, 7), heading: (0, 1), action: forward, reward: -9.67329991771
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, None, 'left'), 'deadline': 5, 't': 20, 'action': 'forward', 'reward': -9.673299917709773, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, 'left')
+Agent attempted driving forward through a red light. (rewarded -9.67)
+16% of time remaining to reach destination.
+
+/-------------------
+| Step 21 Results
+\-------------------
+
+Environment.step(): t = 21
+Environment.act() [POST]: location: (5, 7), heading: (-1, 0), action: right, reward: 0.570217592562
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 4, 't': 21, 'action': 'right', 'reward': 0.5702175925622359, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent followed the waypoint right. (rewarded 0.57)
+12% of time remaining to reach destination.
+
+/-------------------
+| Step 22 Results
+\-------------------
+
+Environment.step(): t = 22
+Environment.act() [POST]: location: (5, 6), heading: (0, -1), action: right, reward: 0.951149373963
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'forward', 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, 'left', 'forward'), 'deadline': 3, 't': 22, 'action': 'right', 'reward': 0.9511493739630077, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, 'left', 'forward')
+Agent drove right instead of forward. (rewarded 0.95)
+8% of time remaining to reach destination.
+
+/-------------------
+| Step 23 Results
+\-------------------
+
+Environment.step(): t = 23
+Environment.act() [POST]: location: (5, 6), heading: (0, -1), action: None, reward: 1.13835864914
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, None, 'left'), 'deadline': 2, 't': 23, 'action': None, 'reward': 1.1383586491418645, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, 'left')
+Agent properly idled at a red light. (rewarded 1.14)
+4% of time remaining to reach destination.
+
+/-------------------
+| Step 24 Results
+\-------------------
+
+Environment.step(): t = 24
+Environment.act() [POST]: location: (5, 6), heading: (0, -1), action: left, reward: -39.2059381953
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 4, 'light': 'red', 'state': ('left', 'red', None, None, 'forward'), 'deadline': 1, 't': 24, 'action': 'left', 'reward': -39.205938195338305, 'waypoint': 'left'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('left', 'red', None, None, 'forward')
+Agent attempted driving left through a red light with traffic and cause a major accident. (rewarded -39.21)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 2
+\-------------------------
+
+Environment.reset(): Trial set up with start = (7, 6), destination = (1, 4), deadline = 20
+Simulating trial. . . 
+epsilon = 0.9922; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (8, 6), heading: (1, 0), action: right, reward: 2.95993595355
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 20, 't': 0, 'action': 'right', 'reward': 2.959935953554476, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent followed the waypoint right. (rewarded 2.96)
+95% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (8, 6), heading: (1, 0), action: None, reward: 2.23813666822
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, None, 'left'), 'deadline': 19, 't': 1, 'action': None, 'reward': 2.2381366682186195, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, 'left')
+Agent properly idled at a red light. (rewarded 2.24)
+90% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (8, 7), heading: (0, 1), action: right, reward: 1.57389323106
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 18, 't': 2, 'action': 'right', 'reward': 1.573893231064266, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent drove right instead of forward. (rewarded 1.57)
+85% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (8, 7), heading: (0, 1), action: left, reward: -19.9221558387
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 3, 'light': 'green', 'state': ('left', 'green', 'forward', None, None), 'deadline': 17, 't': 3, 'action': 'left', 'reward': -19.922155838732376, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'forward', None, None)
+Agent attempted driving left through traffic and cause a minor accident. (rewarded -19.92)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (1, 7), heading: (1, 0), action: left, reward: 2.37477318958
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, None), 'deadline': 16, 't': 4, 'action': 'left', 'reward': 2.374773189582262, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, None)
+Agent followed the waypoint left. (rewarded 2.37)
+75% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (1, 2), heading: (0, 1), action: right, reward: 2.85341749495
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 15, 't': 5, 'action': 'right', 'reward': 2.853417494953006, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent followed the waypoint right. (rewarded 2.85)
+70% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (8, 2), heading: (-1, 0), action: right, reward: -0.0783529802223
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'right', 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, 'left', 'right'), 'deadline': 14, 't': 6, 'action': 'right', 'reward': -0.07835298022227777, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, 'left', 'right')
+Agent drove right instead of forward. (rewarded -0.08)
+65% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (8, 2), heading: (-1, 0), action: None, reward: -4.49852985037
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 1, 'light': 'green', 'state': ('left', 'green', None, 'left', None), 'deadline': 13, 't': 7, 'action': None, 'reward': -4.498529850367325, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, 'left', None)
+Agent idled at a green light with no oncoming traffic. (rewarded -4.50)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (8, 7), heading: (0, -1), action: right, reward: 0.936342412091
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, 'left', None), 'deadline': 12, 't': 8, 'action': 'right', 'reward': 0.9363424120905915, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, 'left', None)
+Agent drove right instead of left. (rewarded 0.94)
+55% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (1, 7), heading: (1, 0), action: right, reward: 1.67549574332
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'right', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'right', None, 'left'), 'deadline': 11, 't': 9, 'action': 'right', 'reward': 1.6754957433157065, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'right', None, 'left')
+Agent followed the waypoint right. (rewarded 1.68)
+50% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (1, 7), heading: (1, 0), action: left, reward: -10.9902845602
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': 'left'}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', 'left', 'left', None), 'deadline': 10, 't': 10, 'action': 'left', 'reward': -10.990284560187897, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', 'left', None)
+Agent attempted driving left through a red light. (rewarded -10.99)
+45% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (1, 7), heading: (1, 0), action: forward, reward: -9.07703450282
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', 'left', None, None), 'deadline': 9, 't': 11, 'action': 'forward', 'reward': -9.077034502822853, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', None, None)
+Agent attempted driving forward through a red light. (rewarded -9.08)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (1, 2), heading: (0, 1), action: right, reward: 1.77030832489
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'left', None, None), 'deadline': 8, 't': 12, 'action': 'right', 'reward': 1.7703083248863258, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', None, None)
+Agent followed the waypoint right. (rewarded 1.77)
+35% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (1, 2), heading: (0, 1), action: None, reward: 2.52005793428
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, 'left', 'left'), 'deadline': 7, 't': 13, 'action': None, 'reward': 2.520057934281569, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, 'left', 'left')
+Agent properly idled at a red light. (rewarded 2.52)
+30% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (1, 2), heading: (0, 1), action: left, reward: -10.5461791628
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 6, 't': 14, 'action': 'left', 'reward': -10.546179162831802, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -10.55)
+25% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (8, 2), heading: (-1, 0), action: right, reward: 0.935940957559
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 5, 't': 15, 'action': 'right', 'reward': 0.9359409575594562, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent drove right instead of forward. (rewarded 0.94)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (7, 2), heading: (-1, 0), action: forward, reward: -0.0916976346703
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'forward', None, 'left'), 'deadline': 4, 't': 16, 'action': 'forward', 'reward': -0.09169763467030889, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'forward', None, 'left')
+Agent drove forward instead of left. (rewarded -0.09)
+15% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (7, 7), heading: (0, -1), action: right, reward: -0.246079914656
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, 'left', None), 'deadline': 3, 't': 17, 'action': 'right', 'reward': -0.24607991465632562, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, 'left', None)
+Agent drove right instead of left. (rewarded -0.25)
+10% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (7, 7), heading: (0, -1), action: None, reward: 0.811348668687
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'forward', None, None), 'deadline': 2, 't': 18, 'action': None, 'reward': 0.8113486686871156, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'forward', None, None)
+Agent properly idled at a red light. (rewarded 0.81)
+5% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (7, 6), heading: (0, -1), action: forward, reward: 1.07977046649
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'forward', None, None), 'deadline': 1, 't': 19, 'action': 'forward', 'reward': 1.079770466491511, 'waypoint': 'right'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('right', 'green', 'forward', None, None)
+Agent drove forward instead of right. (rewarded 1.08)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 3
+\-------------------------
+
+Environment.reset(): Trial set up with start = (4, 4), destination = (6, 2), deadline = 20
+Simulating trial. . . 
+epsilon = 0.9883; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (3, 4), heading: (-1, 0), action: forward, reward: 0.417501533953
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'right', 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', 'forward', 'right'), 'deadline': 20, 't': 0, 'action': 'forward', 'reward': 0.4175015339527821, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', 'forward', 'right')
+Agent drove forward instead of right. (rewarded 0.42)
+95% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (3, 3), heading: (0, -1), action: right, reward: 1.4377796206
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, 'left', None), 'deadline': 19, 't': 1, 'action': 'right', 'reward': 1.4377796205994737, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'left', None)
+Agent followed the waypoint right. (rewarded 1.44)
+90% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (3, 3), heading: (0, -1), action: None, reward: 1.90204755914
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'forward', 'left', None), 'deadline': 18, 't': 2, 'action': None, 'reward': 1.9020475591440267, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'forward', 'left', None)
+Agent properly idled at a red light. (rewarded 1.90)
+85% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (3, 3), heading: (0, -1), action: left, reward: -9.39966540614
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', 'forward', None, None), 'deadline': 17, 't': 3, 'action': 'left', 'reward': -9.399665406142544, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'forward', None, None)
+Agent attempted driving left through a red light. (rewarded -9.40)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (3, 3), heading: (0, -1), action: left, reward: -10.7039856972
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': 'right'}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', 'left', 'right', None), 'deadline': 16, 't': 4, 'action': 'left', 'reward': -10.70398569719382, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', 'right', None)
+Agent attempted driving left through a red light. (rewarded -10.70)
+75% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (3, 3), heading: (0, -1), action: None, reward: 0.155948874481
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', 'forward', 'left'), 'deadline': 15, 't': 5, 'action': None, 'reward': 0.15594887448053174, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', 'forward', 'left')
+Agent idled at a green light with oncoming traffic. (rewarded 0.16)
+70% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (2, 3), heading: (-1, 0), action: left, reward: 0.39616420222
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', 'forward', 'left'), 'deadline': 14, 't': 6, 'action': 'left', 'reward': 0.396164202220489, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', 'forward', 'left')
+Agent drove left instead of right. (rewarded 0.40)
+65% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (2, 3), heading: (-1, 0), action: None, reward: -4.19517972856
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 1, 'light': 'green', 'state': ('forward', 'green', None, None, None), 'deadline': 13, 't': 7, 'action': None, 'reward': -4.195179728559905, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, None)
+Agent idled at a green light with no oncoming traffic. (rewarded -4.20)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (2, 3), heading: (-1, 0), action: None, reward: -5.31555944165
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 1, 'light': 'green', 'state': ('forward', 'green', None, None, None), 'deadline': 12, 't': 8, 'action': None, 'reward': -5.315559441647611, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, None)
+Agent idled at a green light with no oncoming traffic. (rewarded -5.32)
+55% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (2, 2), heading: (0, -1), action: right, reward: 1.01386350671
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', 'forward', None, None), 'deadline': 11, 't': 9, 'action': 'right', 'reward': 1.0138635067083797, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'forward', None, None)
+Agent drove right instead of forward. (rewarded 1.01)
+50% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (2, 2), heading: (0, -1), action: None, reward: -5.95757847995
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 1, 'light': 'green', 'state': ('left', 'green', None, None, None), 'deadline': 10, 't': 10, 'action': None, 'reward': -5.957578479949348, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, None)
+Agent idled at a green light with no oncoming traffic. (rewarded -5.96)
+45% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (2, 2), heading: (0, -1), action: forward, reward: -10.1235204992
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', None, None, 'left'), 'deadline': 9, 't': 11, 'action': 'forward', 'reward': -10.123520499190755, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, 'left')
+Agent attempted driving forward through a red light. (rewarded -10.12)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (3, 2), heading: (1, 0), action: right, reward: 0.950088230867
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': 'right'}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, 'right', 'left'), 'deadline': 8, 't': 12, 'action': 'right', 'reward': 0.950088230866942, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, 'right', 'left')
+Agent drove right instead of left. (rewarded 0.95)
+35% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (3, 3), heading: (0, 1), action: right, reward: -0.091200014643
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'left', None, None), 'deadline': 7, 't': 13, 'action': 'right', 'reward': -0.09120001464299754, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'left', None, None)
+Agent drove right instead of forward. (rewarded -0.09)
+30% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (2, 3), heading: (-1, 0), action: right, reward: 0.826642667519
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'right', 'right': 'left', 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'right', 'left', 'left'), 'deadline': 6, 't': 14, 'action': 'right', 'reward': 0.8266426675186068, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'right', 'left', 'left')
+Agent drove right instead of left. (rewarded 0.83)
+25% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (2, 4), heading: (0, 1), action: left, reward: 0.876088956706
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, None, 'forward'), 'deadline': 5, 't': 15, 'action': 'left', 'reward': 0.8760889567064103, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, 'forward')
+Agent drove left instead of forward. (rewarded 0.88)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (2, 4), heading: (0, 1), action: None, reward: 0.443455006536
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 4, 't': 16, 'action': None, 'reward': 0.4434550065364664, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent properly idled at a red light. (rewarded 0.44)
+15% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (2, 5), heading: (0, 1), action: forward, reward: 0.60313381164
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, 'left'), 'deadline': 3, 't': 17, 'action': 'forward', 'reward': 0.6031338116400883, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, 'left')
+Agent drove forward instead of right. (rewarded 0.60)
+10% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (1, 5), heading: (-1, 0), action: right, reward: 1.67512951162
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'right', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'right', None, None), 'deadline': 2, 't': 18, 'action': 'right', 'reward': 1.675129511618566, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'right', None, None)
+Agent followed the waypoint right. (rewarded 1.68)
+5% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (8, 5), heading: (-1, 0), action: forward, reward: 1.8295191293
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'left', 'left', None), 'deadline': 1, 't': 19, 'action': 'forward', 'reward': 1.829519129300183, 'waypoint': 'forward'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('forward', 'green', 'left', 'left', None)
+Agent followed the waypoint forward. (rewarded 1.83)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 4
+\-------------------------
+
+Environment.reset(): Trial set up with start = (2, 3), destination = (6, 3), deadline = 20
+Simulating trial. . . 
+epsilon = 0.9844; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (2, 2), heading: (0, -1), action: forward, reward: 0.561863793329
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'forward', None, None), 'deadline': 20, 't': 0, 'action': 'forward', 'reward': 0.5618637933292525, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'forward', None, None)
+Agent drove forward instead of left. (rewarded 0.56)
+95% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (2, 2), heading: (0, -1), action: None, reward: 1.23197072895
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'left', None, 'left'), 'deadline': 19, 't': 1, 'action': None, 'reward': 1.2319707289509068, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'left', None, 'left')
+Agent idled at a green light with oncoming traffic. (rewarded 1.23)
+90% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (3, 2), heading: (1, 0), action: right, reward: 1.69405906961
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, 'left'), 'deadline': 18, 't': 2, 'action': 'right', 'reward': 1.6940590696069067, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, 'left')
+Agent drove right instead of left. (rewarded 1.69)
+85% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (4, 2), heading: (1, 0), action: forward, reward: 2.18948307068
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, 'forward', None), 'deadline': 17, 't': 3, 'action': 'forward', 'reward': 2.189483070675818, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, 'forward', None)
+Agent followed the waypoint forward. (rewarded 2.19)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (4, 2), heading: (1, 0), action: forward, reward: -39.7395884115
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': 'left', 'left': 'forward'}, 'violation': 4, 'light': 'red', 'state': ('forward', 'red', 'left', 'forward', 'left'), 'deadline': 16, 't': 4, 'action': 'forward', 'reward': -39.7395884115287, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', 'forward', 'left')
+Agent attempted driving forward through a red light with traffic and cause a major accident. (rewarded -39.74)
+75% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (4, 2), heading: (1, 0), action: left, reward: -10.0674244222
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': 'left', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', 'left', None, 'left'), 'deadline': 15, 't': 5, 'action': 'left', 'reward': -10.067424422156375, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', None, 'left')
+Agent attempted driving left through a red light. (rewarded -10.07)
+70% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (4, 3), heading: (0, 1), action: right, reward: 0.939557764294
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', 'left', None, None), 'deadline': 14, 't': 6, 'action': 'right', 'reward': 0.9395577642943722, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', None, None)
+Agent drove right instead of forward. (rewarded 0.94)
+65% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (4, 3), heading: (0, 1), action: None, reward: 1.81475103112
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'right', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', 'right', None, 'left'), 'deadline': 13, 't': 7, 'action': None, 'reward': 1.8147510311181196, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'right', None, 'left')
+Agent properly idled at a red light. (rewarded 1.81)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (3, 3), heading: (-1, 0), action: right, reward: -0.00312686132308
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 12, 't': 8, 'action': 'right', 'reward': -0.0031268613230807096, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent drove right instead of left. (rewarded -0.00)
+55% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (2, 3), heading: (-1, 0), action: forward, reward: 0.418342101708
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 11, 't': 9, 'action': 'forward', 'reward': 0.41834210170764496, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent drove forward instead of right. (rewarded 0.42)
+50% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (2, 2), heading: (0, -1), action: right, reward: 1.31970619037
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', 'forward', None, None), 'deadline': 10, 't': 10, 'action': 'right', 'reward': 1.3197061903711842, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'forward', None, None)
+Agent drove right instead of forward. (rewarded 1.32)
+45% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (1, 2), heading: (-1, 0), action: left, reward: 1.21095962112
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'forward', 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'left', 'left', 'forward'), 'deadline': 9, 't': 11, 'action': 'left', 'reward': 1.2109596211173708, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'left', 'left', 'forward')
+Agent followed the waypoint left. (rewarded 1.21)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (1, 2), heading: (-1, 0), action: left, reward: -10.8089515111
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 8, 't': 12, 'action': 'left', 'reward': -10.808951511094296, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -10.81)
+35% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (1, 7), heading: (0, -1), action: right, reward: 1.51406077575
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, None, None), 'deadline': 7, 't': 13, 'action': 'right', 'reward': 1.5140607757544782, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, None)
+Agent drove right instead of forward. (rewarded 1.51)
+30% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (1, 7), heading: (0, -1), action: None, reward: 2.1932427127
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', 'forward', None, 'left'), 'deadline': 6, 't': 14, 'action': None, 'reward': 2.1932427127024594, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'forward', None, 'left')
+Agent properly idled at a red light. (rewarded 2.19)
+25% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (1, 7), heading: (0, -1), action: left, reward: -10.9743549298
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', 'forward', None, None), 'deadline': 5, 't': 15, 'action': 'left', 'reward': -10.974354929781054, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'forward', None, None)
+Agent attempted driving left through a red light. (rewarded -10.97)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (1, 7), heading: (0, -1), action: left, reward: -20.1822986275
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': None, 'left': 'left'}, 'violation': 3, 'light': 'green', 'state': ('left', 'green', 'forward', 'left', None), 'deadline': 4, 't': 16, 'action': 'left', 'reward': -20.182298627509617, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'forward', 'left', None)
+Agent attempted driving left through traffic and cause a minor accident. (rewarded -20.18)
+15% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (1, 6), heading: (0, -1), action: forward, reward: 1.29575213977
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'forward', 'left', None), 'deadline': 3, 't': 17, 'action': 'forward', 'reward': 1.2957521397655465, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'forward', 'left', None)
+Agent drove forward instead of left. (rewarded 1.30)
+10% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (1, 5), heading: (0, -1), action: forward, reward: -0.404948749122
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, 'left'), 'deadline': 2, 't': 18, 'action': 'forward', 'reward': -0.4049487491215109, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, 'left')
+Agent drove forward instead of left. (rewarded -0.40)
+5% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (1, 5), heading: (0, -1), action: None, reward: 1.46437872182
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 1, 't': 19, 'action': None, 'reward': 1.4643787218151212, 'waypoint': 'left'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('left', 'red', None, None, None)
+Agent properly idled at a red light. (rewarded 1.46)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 5
+\-------------------------
+
+Environment.reset(): Trial set up with start = (6, 3), destination = (4, 6), deadline = 25
+Simulating trial. . . 
+epsilon = 0.9805; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (6, 3), heading: (0, -1), action: None, reward: 1.49200082993
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'left', 'left', 'left'), 'deadline': 25, 't': 0, 'action': None, 'reward': 1.4920008299299987, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'left', 'left', 'left')
+Agent idled at a green light with oncoming traffic. (rewarded 1.49)
+96% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (6, 2), heading: (0, -1), action: forward, reward: 0.409977104981
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'left', 'left', 'left'), 'deadline': 24, 't': 1, 'action': 'forward', 'reward': 0.40997710498052564, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'left', 'left', 'left')
+Agent drove forward instead of left. (rewarded 0.41)
+92% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (7, 2), heading: (1, 0), action: right, reward: 1.51681643322
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, 'forward', 'left'), 'deadline': 23, 't': 2, 'action': 'right', 'reward': 1.516816433222257, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, 'forward', 'left')
+Agent drove right instead of left. (rewarded 1.52)
+88% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (7, 2), heading: (1, 0), action: forward, reward: -9.2899419384
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': 'right', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', 'left', None, 'right'), 'deadline': 22, 't': 3, 'action': 'forward', 'reward': -9.289941938401682, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'left', None, 'right')
+Agent attempted driving forward through a red light. (rewarded -9.29)
+84% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (7, 2), heading: (1, 0), action: left, reward: -9.11488677935
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', 'left', None, None), 'deadline': 21, 't': 4, 'action': 'left', 'reward': -9.11488677935322, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'left', None, None)
+Agent attempted driving left through a red light. (rewarded -9.11)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (7, 3), heading: (0, 1), action: right, reward: 0.666240579247
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'left', None, 'left'), 'deadline': 20, 't': 5, 'action': 'right', 'reward': 0.6662405792471359, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'left', None, 'left')
+Agent drove right instead of left. (rewarded 0.67)
+76% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (7, 4), heading: (0, 1), action: forward, reward: 0.760258418145
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 19, 't': 6, 'action': 'forward', 'reward': 0.7602584181448945, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent drove forward instead of right. (rewarded 0.76)
+72% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (7, 5), heading: (0, 1), action: forward, reward: 0.486657897631
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 18, 't': 7, 'action': 'forward', 'reward': 0.48665789763112155, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent drove forward instead of right. (rewarded 0.49)
+68% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (7, 5), heading: (0, 1), action: forward, reward: -9.95204500152
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'right'}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, 'right', None), 'deadline': 17, 't': 8, 'action': 'forward', 'reward': -9.95204500152083, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'right', None)
+Agent attempted driving forward through a red light. (rewarded -9.95)
+64% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (7, 6), heading: (0, 1), action: forward, reward: 1.15183798575
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, 'left'), 'deadline': 16, 't': 9, 'action': 'forward', 'reward': 1.1518379857478358, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, 'left')
+Agent drove forward instead of right. (rewarded 1.15)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (7, 6), heading: (0, 1), action: left, reward: -10.0042984385
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 15, 't': 10, 'action': 'left', 'reward': -10.00429843845008, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -10.00)
+56% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (7, 6), heading: (0, 1), action: None, reward: 1.17291652689
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', None, None), 'deadline': 14, 't': 11, 'action': None, 'reward': 1.1729165268850958, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', None, None)
+Agent idled at a green light with oncoming traffic. (rewarded 1.17)
+52% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (7, 7), heading: (0, 1), action: forward, reward: 0.924926527007
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', None, None), 'deadline': 13, 't': 12, 'action': 'forward', 'reward': 0.9249265270066429, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', None, None)
+Agent drove forward instead of right. (rewarded 0.92)
+48% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (7, 2), heading: (0, 1), action: forward, reward: 0.61572086316
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, 'left', None), 'deadline': 12, 't': 13, 'action': 'forward', 'reward': 0.6157208631596043, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, 'left', None)
+Agent drove forward instead of right. (rewarded 0.62)
+44% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (7, 2), heading: (0, 1), action: forward, reward: -10.5424429424
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 11, 't': 14, 'action': 'forward', 'reward': -10.542442942434144, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent attempted driving forward through a red light. (rewarded -10.54)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (7, 2), heading: (0, 1), action: left, reward: -9.81442945669
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'right', 'left': 'right'}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, 'right', 'right'), 'deadline': 10, 't': 15, 'action': 'left', 'reward': -9.814429456691308, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'right', 'right')
+Agent attempted driving left through a red light. (rewarded -9.81)
+36% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (7, 2), heading: (0, 1), action: None, reward: 0.910131091644
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, 'left', None), 'deadline': 9, 't': 16, 'action': None, 'reward': 0.9101310916442862, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'left', None)
+Agent properly idled at a red light. (rewarded 0.91)
+32% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (6, 2), heading: (-1, 0), action: right, reward: 1.8587503078
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, 'forward', None), 'deadline': 8, 't': 17, 'action': 'right', 'reward': 1.8587503077973295, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, 'forward', None)
+Agent followed the waypoint right. (rewarded 1.86)
+28% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (5, 2), heading: (-1, 0), action: forward, reward: 1.40520593192
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'right', 'right': 'left', 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'right', 'forward', 'left'), 'deadline': 7, 't': 18, 'action': 'forward', 'reward': 1.4052059319225647, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'right', 'forward', 'left')
+Agent followed the waypoint forward. (rewarded 1.41)
+24% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (5, 3), heading: (0, 1), action: left, reward: 0.43802423691
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'left', None, None), 'deadline': 6, 't': 19, 'action': 'left', 'reward': 0.4380242369098398, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'left', None, None)
+Agent drove left instead of forward. (rewarded 0.44)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 20 Results
+\-------------------
+
+Environment.step(): t = 20
+Environment.act() [POST]: location: (5, 3), heading: (0, 1), action: None, reward: -5.84564860827
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 1, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 5, 't': 20, 'action': None, 'reward': -5.845648608270756, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent idled at a green light with no oncoming traffic. (rewarded -5.85)
+16% of time remaining to reach destination.
+
+/-------------------
+| Step 21 Results
+\-------------------
+
+Environment.step(): t = 21
+Environment.act() [POST]: location: (4, 3), heading: (-1, 0), action: right, reward: 0.810593397645
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 4, 't': 21, 'action': 'right', 'reward': 0.8105933976453406, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent followed the waypoint right. (rewarded 0.81)
+12% of time remaining to reach destination.
+
+/-------------------
+| Step 22 Results
+\-------------------
+
+Environment.step(): t = 22
+Environment.act() [POST]: location: (4, 3), heading: (-1, 0), action: forward, reward: -39.6741568132
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': 'forward'}, 'violation': 4, 'light': 'red', 'state': ('right', 'red', None, 'forward', 'left'), 'deadline': 3, 't': 22, 'action': 'forward', 'reward': -39.6741568131633, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'forward', 'left')
+Agent attempted driving forward through a red light with traffic and cause a major accident. (rewarded -39.67)
+8% of time remaining to reach destination.
+
+/-------------------
+| Step 23 Results
+\-------------------
+
+Environment.step(): t = 23
+Environment.act() [POST]: location: (4, 3), heading: (-1, 0), action: right, reward: -20.5396635115
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': 'forward'}, 'violation': 3, 'light': 'red', 'state': ('right', 'red', None, 'forward', 'left'), 'deadline': 2, 't': 23, 'action': 'right', 'reward': -20.539663511464717, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'forward', 'left')
+Agent attempted driving right through traffic and cause a minor accident. (rewarded -20.54)
+4% of time remaining to reach destination.
+
+/-------------------
+| Step 24 Results
+\-------------------
+
+Environment.step(): t = 24
+Environment.act() [POST]: location: (4, 3), heading: (-1, 0), action: left, reward: -9.87007231619
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, None, 'left'), 'deadline': 1, 't': 24, 'action': 'left', 'reward': -9.870072316188011, 'waypoint': 'right'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('right', 'red', None, None, 'left')
+Agent attempted driving left through a red light. (rewarded -9.87)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 6
+\-------------------------
+
+Environment.reset(): Trial set up with start = (3, 4), destination = (7, 4), deadline = 20
+Simulating trial. . . 
+epsilon = 0.9766; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (3, 5), heading: (0, 1), action: right, reward: 1.10809774439
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 20, 't': 0, 'action': 'right', 'reward': 1.1080977443925728, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent followed the waypoint right. (rewarded 1.11)
+95% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (3, 5), heading: (0, 1), action: None, reward: 0.370319658083
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', None, 'left'), 'deadline': 19, 't': 1, 'action': None, 'reward': 0.3703196580826519, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', None, 'left')
+Agent idled at a green light with oncoming traffic. (rewarded 0.37)
+90% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (3, 6), heading: (0, 1), action: forward, reward: 1.30820182964
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'right', 'right': 'left', 'left': 'right'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'right', 'right', 'left'), 'deadline': 18, 't': 2, 'action': 'forward', 'reward': 1.3082018296395068, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'right', 'right', 'left')
+Agent drove forward instead of right. (rewarded 1.31)
+85% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (3, 6), heading: (0, 1), action: None, reward: 2.43799320528
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'left', None, None), 'deadline': 17, 't': 3, 'action': None, 'reward': 2.4379932052774187, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', None, None)
+Agent properly idled at a red light. (rewarded 2.44)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (3, 6), heading: (0, 1), action: None, reward: 0.999998508984
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', None, None), 'deadline': 16, 't': 4, 'action': None, 'reward': 0.9999985089844933, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', None, None)
+Agent idled at a green light with oncoming traffic. (rewarded 1.00)
+75% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (3, 7), heading: (0, 1), action: forward, reward: 1.87024591327
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'forward', None, None), 'deadline': 15, 't': 5, 'action': 'forward', 'reward': 1.8702459132744096, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'forward', None, None)
+Agent drove forward instead of right. (rewarded 1.87)
+70% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (3, 7), heading: (0, 1), action: None, reward: 2.66070740562
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'right', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, 'right'), 'deadline': 14, 't': 6, 'action': None, 'reward': 2.6607074056195517, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, 'right')
+Agent properly idled at a red light. (rewarded 2.66)
+65% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (2, 7), heading: (-1, 0), action: right, reward: 2.29217676344
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': 'forward', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'forward', None, 'forward'), 'deadline': 13, 't': 7, 'action': 'right', 'reward': 2.2921767634379426, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'forward', None, 'forward')
+Agent followed the waypoint right. (rewarded 2.29)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (2, 7), heading: (-1, 0), action: forward, reward: -10.4256706952
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 12, 't': 8, 'action': 'forward', 'reward': -10.425670695163067, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent attempted driving forward through a red light. (rewarded -10.43)
+55% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (2, 7), heading: (-1, 0), action: None, reward: -4.79509473828
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 1, 'light': 'green', 'state': ('forward', 'green', None, None, 'left'), 'deadline': 11, 't': 9, 'action': None, 'reward': -4.79509473828471, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, 'left')
+Agent idled at a green light with no oncoming traffic. (rewarded -4.80)
+50% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (2, 6), heading: (0, -1), action: right, reward: 0.375425929461
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, None, 'left'), 'deadline': 10, 't': 10, 'action': 'right', 'reward': 0.37542592946147224, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, 'left')
+Agent drove right instead of forward. (rewarded 0.38)
+45% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (2, 6), heading: (0, -1), action: None, reward: -4.79907302427
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'right', 'right': None, 'left': None}, 'violation': 1, 'light': 'green', 'state': ('left', 'green', 'right', None, None), 'deadline': 9, 't': 11, 'action': None, 'reward': -4.799073024265288, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'right', None, None)
+Agent idled at a green light with no oncoming traffic. (rewarded -4.80)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (2, 5), heading: (0, -1), action: forward, reward: 0.201595795378
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, 'forward', None), 'deadline': 8, 't': 12, 'action': 'forward', 'reward': 0.20159579537809935, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, 'forward', None)
+Agent drove forward instead of left. (rewarded 0.20)
+35% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (2, 5), heading: (0, -1), action: left, reward: -40.4278947862
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'forward', 'left': 'forward'}, 'violation': 4, 'light': 'red', 'state': ('left', 'red', None, 'forward', 'forward'), 'deadline': 7, 't': 13, 'action': 'left', 'reward': -40.42789478623989, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, 'forward', 'forward')
+Agent attempted driving left through a red light with traffic and cause a major accident. (rewarded -40.43)
+30% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (3, 5), heading: (1, 0), action: right, reward: 0.969008160401
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 6, 't': 14, 'action': 'right', 'reward': 0.9690081604009652, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent drove right instead of left. (rewarded 0.97)
+25% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (3, 5), heading: (1, 0), action: None, reward: 1.17953101904
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 5, 't': 15, 'action': None, 'reward': 1.1795310190420536, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent properly idled at a red light. (rewarded 1.18)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (4, 5), heading: (1, 0), action: forward, reward: 0.132585233042
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, None), 'deadline': 4, 't': 16, 'action': 'forward', 'reward': 0.13258523304161263, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, None)
+Agent drove forward instead of left. (rewarded 0.13)
+15% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (4, 6), heading: (0, 1), action: right, reward: -0.582337720798
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, None, 'left'), 'deadline': 3, 't': 17, 'action': 'right', 'reward': -0.5823377207979904, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, 'left')
+Agent drove right instead of forward. (rewarded -0.58)
+10% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (4, 6), heading: (0, 1), action: left, reward: -9.1834598988
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', 'left', None, None), 'deadline': 2, 't': 18, 'action': 'left', 'reward': -9.183459898795595, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'left', None, None)
+Agent attempted driving left through a red light. (rewarded -9.18)
+5% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (4, 6), heading: (0, 1), action: None, reward: 0.410938387709
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', 'left', None, None), 'deadline': 1, 't': 19, 'action': None, 'reward': 0.4109383877091901, 'waypoint': 'left'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('left', 'red', 'left', None, None)
+Agent properly idled at a red light. (rewarded 0.41)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 7
+\-------------------------
+
+Environment.reset(): Trial set up with start = (7, 5), destination = (2, 6), deadline = 20
+Simulating trial. . . 
+epsilon = 0.9728; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (7, 5), heading: (0, -1), action: None, reward: -4.04229916674
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 1, 'light': 'green', 'state': ('right', 'green', None, 'forward', None), 'deadline': 20, 't': 0, 'action': None, 'reward': -4.042299166735445, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, 'forward', None)
+Agent idled at a green light with no oncoming traffic. (rewarded -4.04)
+95% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (6, 5), heading: (-1, 0), action: left, reward: 0.665899119999
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, 'forward', None), 'deadline': 19, 't': 1, 'action': 'left', 'reward': 0.6658991199992127, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, 'forward', None)
+Agent drove left instead of right. (rewarded 0.67)
+90% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (6, 4), heading: (0, -1), action: right, reward: 1.75910462108
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, None), 'deadline': 18, 't': 2, 'action': 'right', 'reward': 1.759104621082947, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, None)
+Agent drove right instead of left. (rewarded 1.76)
+85% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (6, 4), heading: (0, -1), action: forward, reward: -10.8760621607
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 17, 't': 3, 'action': 'forward', 'reward': -10.87606216066669, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent attempted driving forward through a red light. (rewarded -10.88)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (7, 4), heading: (1, 0), action: right, reward: 1.95369836982
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'right', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, 'right'), 'deadline': 16, 't': 4, 'action': 'right', 'reward': 1.953698369819779, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, 'right')
+Agent followed the waypoint right. (rewarded 1.95)
+75% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (7, 4), heading: (1, 0), action: left, reward: -40.6948454238
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 4, 'light': 'red', 'state': ('forward', 'red', None, 'forward', None), 'deadline': 15, 't': 5, 'action': 'left', 'reward': -40.69484542382456, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, 'forward', None)
+Agent attempted driving left through a red light with traffic and cause a major accident. (rewarded -40.69)
+70% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (7, 4), heading: (1, 0), action: forward, reward: -39.2371807305
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': 'forward', 'left': None}, 'violation': 4, 'light': 'red', 'state': ('forward', 'red', 'forward', None, 'forward'), 'deadline': 14, 't': 6, 'action': 'forward', 'reward': -39.23718073047917, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'forward', None, 'forward')
+Agent attempted driving forward through a red light with traffic and cause a major accident. (rewarded -39.24)
+65% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (7, 5), heading: (0, 1), action: right, reward: 0.54207156251
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'forward', None, None), 'deadline': 13, 't': 7, 'action': 'right', 'reward': 0.5420715625099013, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'forward', None, None)
+Agent drove right instead of forward. (rewarded 0.54)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (7, 5), heading: (0, 1), action: forward, reward: -9.11174578533
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', 'left', None, None), 'deadline': 12, 't': 8, 'action': 'forward', 'reward': -9.111745785334803, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'left', None, None)
+Agent attempted driving forward through a red light. (rewarded -9.11)
+55% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (6, 5), heading: (-1, 0), action: right, reward: 1.2266653058
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'left', None, None), 'deadline': 11, 't': 9, 'action': 'right', 'reward': 1.226665305796292, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'left', None, None)
+Agent drove right instead of left. (rewarded 1.23)
+50% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (5, 5), heading: (-1, 0), action: forward, reward: 0.698957612801
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, 'left'), 'deadline': 10, 't': 10, 'action': 'forward', 'reward': 0.6989576128008083, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, 'left')
+Agent drove forward instead of left. (rewarded 0.70)
+45% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (5, 4), heading: (0, -1), action: right, reward: 0.60627010684
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', 'left', 'left', None), 'deadline': 9, 't': 11, 'action': 'right', 'reward': 0.6062701068396432, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', 'left', None)
+Agent drove right instead of forward. (rewarded 0.61)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (6, 4), heading: (1, 0), action: right, reward: 1.54326356953
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': 'right'}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, 'right', 'left'), 'deadline': 8, 't': 12, 'action': 'right', 'reward': 1.5432635695298391, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, 'right', 'left')
+Agent drove right instead of left. (rewarded 1.54)
+35% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (6, 3), heading: (0, -1), action: left, reward: 1.51539149346
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'right', 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'left', 'left', 'right'), 'deadline': 7, 't': 13, 'action': 'left', 'reward': 1.5153914934611237, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'left', 'left', 'right')
+Agent drove left instead of forward. (rewarded 1.52)
+30% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (6, 3), heading: (0, -1), action: forward, reward: -10.4874083451
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': 'left'}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, 'left', 'left'), 'deadline': 6, 't': 14, 'action': 'forward', 'reward': -10.487408345083338, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'left', 'left')
+Agent attempted driving forward through a red light. (rewarded -10.49)
+25% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (6, 3), heading: (0, -1), action: left, reward: -10.8121641186
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, 'left', None), 'deadline': 5, 't': 15, 'action': 'left', 'reward': -10.81216411856418, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'left', None)
+Agent attempted driving left through a red light. (rewarded -10.81)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (6, 2), heading: (0, -1), action: forward, reward: 0.846626842186
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 4, 't': 16, 'action': 'forward', 'reward': 0.846626842186488, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent drove forward instead of right. (rewarded 0.85)
+15% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (7, 2), heading: (1, 0), action: right, reward: 1.94217894815
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 3, 't': 17, 'action': 'right', 'reward': 1.9421789481496932, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent followed the waypoint right. (rewarded 1.94)
+10% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (7, 2), heading: (1, 0), action: left, reward: -9.15454080198
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'right', 'left': 'left'}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', None, 'left', 'right'), 'deadline': 2, 't': 18, 'action': 'left', 'reward': -9.154540801975903, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, 'left', 'right')
+Agent attempted driving left through a red light. (rewarded -9.15)
+5% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (7, 3), heading: (0, 1), action: right, reward: 1.04653143571
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, 'left', None), 'deadline': 1, 't': 19, 'action': 'right', 'reward': 1.0465314357113384, 'waypoint': 'forward'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('forward', 'red', None, 'left', None)
+Agent drove right instead of forward. (rewarded 1.05)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 8
+\-------------------------
+
+Environment.reset(): Trial set up with start = (6, 2), destination = (8, 5), deadline = 25
+Simulating trial. . . 
+epsilon = 0.9689; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (6, 2), heading: (0, -1), action: None, reward: -5.41643172604
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 1, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 25, 't': 0, 'action': None, 'reward': -5.416431726040046, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent idled at a green light with no oncoming traffic. (rewarded -5.42)
+96% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (6, 7), heading: (0, -1), action: forward, reward: 0.476956582919
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 24, 't': 1, 'action': 'forward', 'reward': 0.47695658291915133, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent drove forward instead of right. (rewarded 0.48)
+92% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (6, 7), heading: (0, -1), action: None, reward: 1.1851515008
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'left', None, None), 'deadline': 23, 't': 2, 'action': None, 'reward': 1.1851515007968776, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', None, None)
+Agent properly idled at a red light. (rewarded 1.19)
+88% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (6, 7), heading: (0, -1), action: None, reward: 2.19776690837
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'left', None, 'left'), 'deadline': 22, 't': 3, 'action': None, 'reward': 2.197766908369915, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', None, 'left')
+Agent properly idled at a red light. (rewarded 2.20)
+84% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (7, 7), heading: (1, 0), action: right, reward: 2.52671342811
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'left', None, None), 'deadline': 21, 't': 4, 'action': 'right', 'reward': 2.5267134281105434, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', None, None)
+Agent followed the waypoint right. (rewarded 2.53)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (7, 2), heading: (0, 1), action: right, reward: 0.632847507343
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, None, 'left'), 'deadline': 20, 't': 5, 'action': 'right', 'reward': 0.632847507342957, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, 'left')
+Agent drove right instead of forward. (rewarded 0.63)
+76% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (7, 2), heading: (0, 1), action: forward, reward: -10.6958246671
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', None, None, 'left'), 'deadline': 19, 't': 6, 'action': 'forward', 'reward': -10.695824667070067, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, 'left')
+Agent attempted driving forward through a red light. (rewarded -10.70)
+72% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (7, 2), heading: (0, 1), action: left, reward: -9.10129993215
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 18, 't': 7, 'action': 'left', 'reward': -9.101299932148638, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -9.10)
+68% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (7, 2), heading: (0, 1), action: None, reward: 1.26102657768
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 17, 't': 8, 'action': None, 'reward': 1.261026577684588, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent properly idled at a red light. (rewarded 1.26)
+64% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (6, 2), heading: (-1, 0), action: right, reward: 1.03933598439
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'right'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, 'right', None), 'deadline': 16, 't': 9, 'action': 'right', 'reward': 1.0393359843908838, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, 'right', None)
+Agent drove right instead of left. (rewarded 1.04)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (6, 7), heading: (0, -1), action: right, reward: 2.25194640415
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', None, None), 'deadline': 15, 't': 10, 'action': 'right', 'reward': 2.2519464041485033, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', None, None)
+Agent followed the waypoint right. (rewarded 2.25)
+56% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (6, 7), heading: (0, -1), action: left, reward: -10.9256226789
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, None, 'left'), 'deadline': 14, 't': 11, 'action': 'left', 'reward': -10.925622678933212, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, 'left')
+Agent attempted driving left through a red light. (rewarded -10.93)
+52% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (6, 7), heading: (0, -1), action: right, reward: -20.3741513391
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': 'forward'}, 'violation': 3, 'light': 'red', 'state': ('right', 'red', None, 'forward', 'left'), 'deadline': 13, 't': 12, 'action': 'right', 'reward': -20.374151339129753, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'forward', 'left')
+Agent attempted driving right through traffic and cause a minor accident. (rewarded -20.37)
+48% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (7, 7), heading: (1, 0), action: right, reward: 1.31643338143
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 12, 't': 13, 'action': 'right', 'reward': 1.3164333814336018, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent followed the waypoint right. (rewarded 1.32)
+44% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (7, 7), heading: (1, 0), action: forward, reward: -9.00117260963
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', 'left', None, None), 'deadline': 11, 't': 14, 'action': 'forward', 'reward': -9.001172609629023, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', None, None)
+Agent attempted driving forward through a red light. (rewarded -9.00)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (7, 7), heading: (1, 0), action: forward, reward: -40.5579244904
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': 'forward'}, 'violation': 4, 'light': 'red', 'state': ('forward', 'red', 'left', 'forward', None), 'deadline': 10, 't': 15, 'action': 'forward', 'reward': -40.55792449038567, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', 'forward', None)
+Agent attempted driving forward through a red light with traffic and cause a major accident. (rewarded -40.56)
+36% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (7, 6), heading: (0, -1), action: left, reward: -0.250307749286
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'left', None, None), 'deadline': 9, 't': 16, 'action': 'left', 'reward': -0.2503077492860003, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'left', None, None)
+Agent drove left instead of forward. (rewarded -0.25)
+32% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (7, 6), heading: (0, -1), action: left, reward: -10.0791802543
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 8, 't': 17, 'action': 'left', 'reward': -10.079180254278054, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -10.08)
+28% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (7, 6), heading: (0, -1), action: None, reward: 1.41581704101
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': 'forward', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'left', None, 'forward'), 'deadline': 7, 't': 18, 'action': None, 'reward': 1.4158170410076463, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', None, 'forward')
+Agent properly idled at a red light. (rewarded 1.42)
+24% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (6, 6), heading: (-1, 0), action: left, reward: 0.567180988487
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': 'right'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', 'right', 'left'), 'deadline': 6, 't': 19, 'action': 'left', 'reward': 0.5671809884874842, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', 'right', 'left')
+Agent drove left instead of right. (rewarded 0.57)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 20 Results
+\-------------------
+
+Environment.step(): t = 20
+Environment.act() [POST]: location: (6, 7), heading: (0, 1), action: left, reward: -0.398723938425
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, 'forward', None), 'deadline': 5, 't': 20, 'action': 'left', 'reward': -0.3987239384252199, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, 'forward', None)
+Agent drove left instead of right. (rewarded -0.40)
+16% of time remaining to reach destination.
+
+/-------------------
+| Step 21 Results
+\-------------------
+
+Environment.step(): t = 21
+Environment.act() [POST]: location: (6, 7), heading: (0, 1), action: None, reward: 2.14543540533
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'forward', 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, 'left', 'forward'), 'deadline': 4, 't': 21, 'action': None, 'reward': 2.145435405333676, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, 'left', 'forward')
+Agent properly idled at a red light. (rewarded 2.15)
+12% of time remaining to reach destination.
+
+/-------------------
+| Step 22 Results
+\-------------------
+
+Environment.step(): t = 22
+Environment.act() [POST]: location: (6, 7), heading: (0, 1), action: left, reward: -10.1733608527
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'right', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', None, None, 'right'), 'deadline': 3, 't': 22, 'action': 'left', 'reward': -10.17336085269622, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, 'right')
+Agent attempted driving left through a red light. (rewarded -10.17)
+8% of time remaining to reach destination.
+
+/-------------------
+| Step 23 Results
+\-------------------
+
+Environment.step(): t = 23
+Environment.act() [POST]: location: (6, 7), heading: (0, 1), action: left, reward: -40.3466176993
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'forward', 'left': 'left'}, 'violation': 4, 'light': 'red', 'state': ('left', 'red', None, 'left', 'forward'), 'deadline': 2, 't': 23, 'action': 'left', 'reward': -40.34661769933881, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, 'left', 'forward')
+Agent attempted driving left through a red light with traffic and cause a major accident. (rewarded -40.35)
+4% of time remaining to reach destination.
+
+/-------------------
+| Step 24 Results
+\-------------------
+
+Environment.step(): t = 24
+Environment.act() [POST]: location: (6, 7), heading: (0, 1), action: None, reward: 0.485764796485
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, 'left', None), 'deadline': 1, 't': 24, 'action': None, 'reward': 0.48576479648512905, 'waypoint': 'left'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('left', 'red', None, 'left', None)
+Agent properly idled at a red light. (rewarded 0.49)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 9
+\-------------------------
+
+Environment.reset(): Trial set up with start = (6, 5), destination = (3, 7), deadline = 25
+Simulating trial. . . 
+epsilon = 0.9651; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (6, 5), heading: (-1, 0), action: None, reward: -5.58559397261
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 1, 'light': 'green', 'state': ('forward', 'green', None, None, None), 'deadline': 25, 't': 0, 'action': None, 'reward': -5.585593972605013, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, None)
+Agent idled at a green light with no oncoming traffic. (rewarded -5.59)
+96% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (6, 5), heading: (-1, 0), action: None, reward: -5.20313802623
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'right'}, 'violation': 1, 'light': 'green', 'state': ('forward', 'green', None, 'right', None), 'deadline': 24, 't': 1, 'action': None, 'reward': -5.203138026227104, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, 'right', None)
+Agent idled at a green light with no oncoming traffic. (rewarded -5.20)
+92% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (6, 6), heading: (0, 1), action: left, reward: 1.65551897121
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, None, None), 'deadline': 23, 't': 2, 'action': 'left', 'reward': 1.6555189712071439, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, None)
+Agent drove left instead of forward. (rewarded 1.66)
+88% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (5, 6), heading: (-1, 0), action: right, reward: 2.72433080407
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'left', None, None), 'deadline': 22, 't': 3, 'action': 'right', 'reward': 2.72433080406608, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', None, None)
+Agent followed the waypoint right. (rewarded 2.72)
+84% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (4, 6), heading: (-1, 0), action: forward, reward: 2.64530735562
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'right', 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'left', 'left', 'right'), 'deadline': 21, 't': 4, 'action': 'forward', 'reward': 2.6453073556238875, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'left', 'left', 'right')
+Agent followed the waypoint forward. (rewarded 2.65)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (4, 6), heading: (-1, 0), action: left, reward: -40.425426485
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': 'forward', 'left': 'right'}, 'violation': 4, 'light': 'red', 'state': ('forward', 'red', 'left', 'right', 'forward'), 'deadline': 20, 't': 5, 'action': 'left', 'reward': -40.42542648503376, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', 'right', 'forward')
+Agent attempted driving left through a red light with traffic and cause a major accident. (rewarded -40.43)
+76% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (4, 7), heading: (0, 1), action: left, reward: 0.923525951002
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'left', None, 'left'), 'deadline': 19, 't': 6, 'action': 'left', 'reward': 0.9235259510018098, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'left', None, 'left')
+Agent drove left instead of forward. (rewarded 0.92)
+72% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (4, 7), heading: (0, 1), action: None, reward: 2.33971956224
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'forward', None, None), 'deadline': 18, 't': 7, 'action': None, 'reward': 2.339719562241563, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'forward', None, None)
+Agent properly idled at a red light. (rewarded 2.34)
+68% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act(): Primary agent has reached destination!
+Environment.act() [POST]: location: (3, 7), heading: (-1, 0), action: right, reward: 1.85304655849
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'forward', None, None), 'deadline': 17, 't': 8, 'action': 'right', 'reward': 1.853046558494106, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'forward', None, None)
+Agent followed the waypoint right. (rewarded 1.85)
+64% of time remaining to reach destination.
+
+Trial Completed!
+Agent reached the destination.
+
+/-------------------------
+| Training trial 10
+\-------------------------
+
+Environment.reset(): Trial set up with start = (6, 3), destination = (2, 5), deadline = 30
+Simulating trial. . . 
+epsilon = 0.9612; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (6, 3), heading: (0, -1), action: forward, reward: -10.963287107
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, 'left', None), 'deadline': 30, 't': 0, 'action': 'forward', 'reward': -10.963287106985618, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'left', None)
+Agent attempted driving forward through a red light. (rewarded -10.96)
+97% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (6, 3), heading: (0, -1), action: left, reward: -9.52899024469
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', 'left', None, None), 'deadline': 29, 't': 1, 'action': 'left', 'reward': -9.52899024468804, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', None, None)
+Agent attempted driving left through a red light. (rewarded -9.53)
+93% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (7, 3), heading: (1, 0), action: right, reward: 1.84414735896
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'left', 'left', None), 'deadline': 28, 't': 2, 'action': 'right', 'reward': 1.8441473589625201, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', 'left', None)
+Agent followed the waypoint right. (rewarded 1.84)
+90% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (7, 4), heading: (0, 1), action: right, reward: 0.0210020299545
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'left', None, None), 'deadline': 27, 't': 3, 'action': 'right', 'reward': 0.02100202995449718, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'left', None, None)
+Agent drove right instead of forward. (rewarded 0.02)
+87% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (8, 4), heading: (1, 0), action: left, reward: 2.68549491177
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, 'left', 'forward'), 'deadline': 26, 't': 4, 'action': 'left', 'reward': 2.685494911765829, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, 'left', 'forward')
+Agent followed the waypoint left. (rewarded 2.69)
+83% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (8, 4), heading: (1, 0), action: None, reward: -4.15298269918
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 1, 'light': 'green', 'state': ('forward', 'green', None, None, 'forward'), 'deadline': 25, 't': 5, 'action': None, 'reward': -4.152982699181294, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, 'forward')
+Agent idled at a green light with no oncoming traffic. (rewarded -4.15)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (8, 4), heading: (1, 0), action: None, reward: 1.32414199516
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, None, 'forward'), 'deadline': 24, 't': 6, 'action': None, 'reward': 1.3241419951629618, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, 'forward')
+Agent properly idled at a red light. (rewarded 1.32)
+77% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (8, 4), heading: (1, 0), action: forward, reward: -39.8095601037
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': 'forward', 'left': 'right'}, 'violation': 4, 'light': 'red', 'state': ('forward', 'red', 'left', 'right', 'forward'), 'deadline': 23, 't': 7, 'action': 'forward', 'reward': -39.809560103685655, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', 'right', 'forward')
+Agent attempted driving forward through a red light with traffic and cause a major accident. (rewarded -39.81)
+73% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (8, 4), heading: (1, 0), action: None, reward: 1.28637738684
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': 'right'}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', 'left', 'right', None), 'deadline': 22, 't': 8, 'action': None, 'reward': 1.286377386839704, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', 'right', None)
+Agent properly idled at a red light. (rewarded 1.29)
+70% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (8, 5), heading: (0, 1), action: right, reward: 0.337932147832
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', 'left', None, None), 'deadline': 21, 't': 9, 'action': 'right', 'reward': 0.3379321478318622, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', None, None)
+Agent drove right instead of forward. (rewarded 0.34)
+67% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (8, 5), heading: (0, 1), action: forward, reward: -9.5414564564
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', 'left', None, None), 'deadline': 20, 't': 10, 'action': 'forward', 'reward': -9.541456456397889, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'left', None, None)
+Agent attempted driving forward through a red light. (rewarded -9.54)
+63% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (1, 5), heading: (1, 0), action: left, reward: 1.44353826009
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'left', None, None), 'deadline': 19, 't': 11, 'action': 'left', 'reward': 1.4435382600923914, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'left', None, None)
+Agent followed the waypoint left. (rewarded 1.44)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (1, 5), heading: (1, 0), action: None, reward: -5.14183115966
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 1, 'light': 'green', 'state': ('forward', 'green', None, 'left', None), 'deadline': 18, 't': 12, 'action': None, 'reward': -5.141831159655022, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, 'left', None)
+Agent idled at a green light with no oncoming traffic. (rewarded -5.14)
+57% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (1, 5), heading: (1, 0), action: None, reward: 1.47155668748
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, 'left', None), 'deadline': 17, 't': 13, 'action': None, 'reward': 1.4715566874810089, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, 'left', None)
+Agent properly idled at a red light. (rewarded 1.47)
+53% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (1, 5), heading: (1, 0), action: left, reward: -10.8414374713
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'right'}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', None, 'right', None), 'deadline': 16, 't': 14, 'action': 'left', 'reward': -10.841437471337478, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, 'right', None)
+Agent attempted driving left through a red light. (rewarded -10.84)
+50% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (1, 5), heading: (1, 0), action: left, reward: -10.1749018776
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 15, 't': 15, 'action': 'left', 'reward': -10.17490187761259, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -10.17)
+47% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (1, 6), heading: (0, 1), action: right, reward: 0.911103669561
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 14, 't': 16, 'action': 'right', 'reward': 0.9111036695608432, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent drove right instead of forward. (rewarded 0.91)
+43% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (1, 7), heading: (0, 1), action: forward, reward: 0.824120137687
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'right', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, 'right'), 'deadline': 13, 't': 17, 'action': 'forward', 'reward': 0.8241201376868617, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, 'right')
+Agent drove forward instead of left. (rewarded 0.82)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (2, 7), heading: (1, 0), action: left, reward: 2.62084429222
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'left', 'left', 'left'), 'deadline': 12, 't': 18, 'action': 'left', 'reward': 2.6208442922184085, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'left', 'left', 'left')
+Agent followed the waypoint left. (rewarded 2.62)
+37% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (2, 2), heading: (0, 1), action: right, reward: 0.350997601533
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, None), 'deadline': 11, 't': 19, 'action': 'right', 'reward': 0.3509976015327786, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, None)
+Agent drove right instead of left. (rewarded 0.35)
+33% of time remaining to reach destination.
+
+/-------------------
+| Step 20 Results
+\-------------------
+
+Environment.step(): t = 20
+Environment.act() [POST]: location: (2, 2), heading: (0, 1), action: forward, reward: -10.2221381695
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', 'forward', None, None), 'deadline': 10, 't': 20, 'action': 'forward', 'reward': -10.222138169515976, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'forward', None, None)
+Agent attempted driving forward through a red light. (rewarded -10.22)
+30% of time remaining to reach destination.
+
+/-------------------
+| Step 21 Results
+\-------------------
+
+Environment.step(): t = 21
+Environment.act() [POST]: location: (2, 2), heading: (0, 1), action: None, reward: -5.15137529358
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 1, 'light': 'green', 'state': ('right', 'green', 'forward', None, None), 'deadline': 9, 't': 21, 'action': None, 'reward': -5.1513752935811095, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'forward', None, None)
+Agent idled at a green light with no oncoming traffic. (rewarded -5.15)
+27% of time remaining to reach destination.
+
+/-------------------
+| Step 22 Results
+\-------------------
+
+Environment.step(): t = 22
+Environment.act() [POST]: location: (2, 2), heading: (0, 1), action: None, reward: 0.326816273376
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', None, None), 'deadline': 8, 't': 22, 'action': None, 'reward': 0.3268162733761866, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', None, None)
+Agent idled at a green light with oncoming traffic. (rewarded 0.33)
+23% of time remaining to reach destination.
+
+/-------------------
+| Step 23 Results
+\-------------------
+
+Environment.step(): t = 23
+Environment.act() [POST]: location: (1, 2), heading: (-1, 0), action: right, reward: 0.557274563054
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'right', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'right', None, None), 'deadline': 7, 't': 23, 'action': 'right', 'reward': 0.5572745630537941, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'right', None, None)
+Agent followed the waypoint right. (rewarded 0.56)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 24 Results
+\-------------------
+
+Environment.step(): t = 24
+Environment.act() [POST]: location: (1, 2), heading: (-1, 0), action: None, reward: -5.26948065552
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 1, 'light': 'green', 'state': ('right', 'green', None, 'left', None), 'deadline': 6, 't': 24, 'action': None, 'reward': -5.269480655520633, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, 'left', None)
+Agent idled at a green light with no oncoming traffic. (rewarded -5.27)
+17% of time remaining to reach destination.
+
+/-------------------
+| Step 25 Results
+\-------------------
+
+Environment.step(): t = 25
+Environment.act() [POST]: location: (1, 7), heading: (0, -1), action: right, reward: 0.451766392721
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', 'left', 'left', None), 'deadline': 5, 't': 25, 'action': 'right', 'reward': 0.45176639272135555, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', 'left', 'left', None)
+Agent followed the waypoint right. (rewarded 0.45)
+13% of time remaining to reach destination.
+
+/-------------------
+| Step 26 Results
+\-------------------
+
+Environment.step(): t = 26
+Environment.act() [POST]: location: (1, 7), heading: (0, -1), action: None, reward: 0.472747486137
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, 'left'), 'deadline': 4, 't': 26, 'action': None, 'reward': 0.4727474861371894, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, 'left')
+Agent properly idled at a red light. (rewarded 0.47)
+10% of time remaining to reach destination.
+
+/-------------------
+| Step 27 Results
+\-------------------
+
+Environment.step(): t = 27
+Environment.act() [POST]: location: (1, 7), heading: (0, -1), action: forward, reward: -9.75257068559
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 3, 't': 27, 'action': 'forward', 'reward': -9.7525706855867, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent attempted driving forward through a red light. (rewarded -9.75)
+7% of time remaining to reach destination.
+
+/-------------------
+| Step 28 Results
+\-------------------
+
+Environment.step(): t = 28
+Environment.act() [POST]: location: (8, 7), heading: (-1, 0), action: left, reward: 0.547412857227
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 2, 't': 28, 'action': 'left', 'reward': 0.5474128572271427, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent drove left instead of right. (rewarded 0.55)
+3% of time remaining to reach destination.
+
+/-------------------
+| Step 29 Results
+\-------------------
+
+Environment.step(): t = 29
+Environment.act() [POST]: location: (8, 7), heading: (-1, 0), action: forward, reward: -40.4316873305
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'forward', 'right': 'forward', 'left': None}, 'violation': 4, 'light': 'red', 'state': ('right', 'red', 'forward', None, 'forward'), 'deadline': 1, 't': 29, 'action': 'forward', 'reward': -40.4316873304506, 'waypoint': 'right'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('right', 'red', 'forward', None, 'forward')
+Agent attempted driving forward through a red light with traffic and cause a major accident. (rewarded -40.43)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 11
+\-------------------------
+
+Environment.reset(): Trial set up with start = (4, 3), destination = (1, 4), deadline = 20
+Simulating trial. . . 
+epsilon = 0.9574; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (5, 3), heading: (1, 0), action: left, reward: 1.94362681544
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', 'forward', 'left'), 'deadline': 20, 't': 0, 'action': 'left', 'reward': 1.9436268154443772, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', 'forward', 'left')
+Agent drove left instead of right. (rewarded 1.94)
+95% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (6, 3), heading: (1, 0), action: forward, reward: 2.54978863812
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', 'forward', None, None), 'deadline': 19, 't': 1, 'action': 'forward', 'reward': 2.5497886381169, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', 'forward', None, None)
+Agent followed the waypoint forward. (rewarded 2.55)
+90% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (6, 3), heading: (1, 0), action: forward, reward: -9.835627585
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': 'right', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', 'left', None, 'right'), 'deadline': 18, 't': 2, 'action': 'forward', 'reward': -9.835627585004636, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', None, 'right')
+Agent attempted driving forward through a red light. (rewarded -9.84)
+85% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (6, 3), heading: (1, 0), action: forward, reward: -10.7207745832
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', 'left', None, None), 'deadline': 17, 't': 3, 'action': 'forward', 'reward': -10.720774583160491, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', None, None)
+Agent attempted driving forward through a red light. (rewarded -10.72)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (6, 4), heading: (0, 1), action: right, reward: 1.16813887494
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', 'left', None, None), 'deadline': 16, 't': 4, 'action': 'right', 'reward': 1.1681388749381618, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', 'left', None, None)
+Agent drove right instead of forward. (rewarded 1.17)
+75% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (7, 4), heading: (1, 0), action: left, reward: 2.29704042972
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, 'left', None), 'deadline': 15, 't': 5, 'action': 'left', 'reward': 2.2970404297222684, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, 'left', None)
+Agent followed the waypoint left. (rewarded 2.30)
+70% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (8, 4), heading: (1, 0), action: forward, reward: 1.40309375776
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'right', 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, 'forward', 'right'), 'deadline': 14, 't': 6, 'action': 'forward', 'reward': 1.4030937577590874, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, 'forward', 'right')
+Agent followed the waypoint forward. (rewarded 1.40)
+65% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (8, 5), heading: (0, 1), action: right, reward: 0.573436528608
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, 'left', 'forward'), 'deadline': 13, 't': 7, 'action': 'right', 'reward': 0.5734365286084946, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, 'left', 'forward')
+Agent drove right instead of forward. (rewarded 0.57)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (8, 6), heading: (0, 1), action: forward, reward: 1.16676965985
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, 'left'), 'deadline': 12, 't': 8, 'action': 'forward', 'reward': 1.1667696598498045, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, 'left')
+Agent drove forward instead of left. (rewarded 1.17)
+55% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (8, 6), heading: (0, 1), action: None, reward: -4.22585419
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 1, 'light': 'green', 'state': ('left', 'green', None, 'forward', None), 'deadline': 11, 't': 9, 'action': None, 'reward': -4.225854190004295, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, 'forward', None)
+Agent idled at a green light with no oncoming traffic. (rewarded -4.23)
+50% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (8, 6), heading: (0, 1), action: left, reward: -20.8441977537
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'right', 'right': None, 'left': 'forward'}, 'violation': 3, 'light': 'green', 'state': ('left', 'green', 'right', 'forward', None), 'deadline': 10, 't': 10, 'action': 'left', 'reward': -20.844197753725638, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'right', 'forward', None)
+Agent attempted driving left through traffic and cause a minor accident. (rewarded -20.84)
+45% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (8, 6), heading: (0, 1), action: None, reward: 1.17007665082
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'forward'}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, 'forward', None), 'deadline': 9, 't': 11, 'action': None, 'reward': 1.170076650824185, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, 'forward', None)
+Agent properly idled at a red light. (rewarded 1.17)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (8, 6), heading: (0, 1), action: forward, reward: -9.91293536999
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 8, 't': 12, 'action': 'forward', 'reward': -9.912935369986622, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent attempted driving forward through a red light. (rewarded -9.91)
+35% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (8, 6), heading: (0, 1), action: None, reward: 2.10246761204
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 7, 't': 13, 'action': None, 'reward': 2.1024676120389953, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent properly idled at a red light. (rewarded 2.10)
+30% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (8, 6), heading: (0, 1), action: left, reward: -9.75954938857
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 6, 't': 14, 'action': 'left', 'reward': -9.759549388567752, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -9.76)
+25% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (8, 6), heading: (0, 1), action: left, reward: -10.3535702038
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 5, 't': 15, 'action': 'left', 'reward': -10.35357020376516, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -10.35)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (1, 6), heading: (1, 0), action: left, reward: 0.677962380423
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', None, None, None), 'deadline': 4, 't': 16, 'action': 'left', 'reward': 0.6779623804234405, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, None)
+Agent followed the waypoint left. (rewarded 0.68)
+15% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (1, 6), heading: (1, 0), action: None, reward: -5.52368878173
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 1, 'light': 'green', 'state': ('left', 'green', None, None, 'forward'), 'deadline': 3, 't': 17, 'action': None, 'reward': -5.523688781727543, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, 'forward')
+Agent idled at a green light with no oncoming traffic. (rewarded -5.52)
+10% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (1, 6), heading: (1, 0), action: None, reward: -4.5153436816
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 1, 'light': 'green', 'state': ('left', 'green', None, None, 'forward'), 'deadline': 2, 't': 18, 'action': None, 'reward': -4.515343681596265, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, None, 'forward')
+Agent idled at a green light with no oncoming traffic. (rewarded -4.52)
+5% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (1, 6), heading: (1, 0), action: forward, reward: -39.9412458606
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 4, 'light': 'red', 'state': ('left', 'red', None, None, 'forward'), 'deadline': 1, 't': 19, 'action': 'forward', 'reward': -39.941245860572984, 'waypoint': 'left'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('left', 'red', None, None, 'forward')
+Agent attempted driving forward through a red light with traffic and cause a major accident. (rewarded -39.94)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 12
+\-------------------------
+
+Environment.reset(): Trial set up with start = (8, 5), destination = (4, 5), deadline = 20
+Simulating trial. . . 
+epsilon = 0.9536; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (8, 4), heading: (0, -1), action: forward, reward: 1.39419708949
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'forward', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'forward', None, 'left'), 'deadline': 20, 't': 0, 'action': 'forward', 'reward': 1.394197089493734, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'forward', None, 'left')
+Agent drove forward instead of right. (rewarded 1.39)
+95% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (8, 4), heading: (0, -1), action: forward, reward: -10.7253780703
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': 'right'}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, 'right', None), 'deadline': 19, 't': 1, 'action': 'forward', 'reward': -10.725378070254006, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'right', None)
+Agent attempted driving forward through a red light. (rewarded -10.73)
+90% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (8, 4), heading: (0, -1), action: left, reward: -9.65000932886
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 18, 't': 2, 'action': 'left', 'reward': -9.650009328857418, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -9.65)
+85% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (8, 4), heading: (0, -1), action: None, reward: 2.16880070214
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 17, 't': 3, 'action': None, 'reward': 2.1688007021357474, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent properly idled at a red light. (rewarded 2.17)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (8, 4), heading: (0, -1), action: forward, reward: -10.4357012
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'right', 'left': 'left'}, 'violation': 2, 'light': 'red', 'state': ('right', 'red', None, 'left', 'right'), 'deadline': 16, 't': 4, 'action': 'forward', 'reward': -10.435701200002146, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'left', 'right')
+Agent attempted driving forward through a red light. (rewarded -10.44)
+75% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (8, 4), heading: (0, -1), action: None, reward: 2.34422970995
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 15, 't': 5, 'action': None, 'reward': 2.3442297099477862, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent properly idled at a red light. (rewarded 2.34)
+70% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (1, 4), heading: (1, 0), action: right, reward: 2.37925133229
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 14, 't': 6, 'action': 'right', 'reward': 2.3792513322919886, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent followed the waypoint right. (rewarded 2.38)
+65% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (1, 3), heading: (0, -1), action: left, reward: 1.31702007227
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'left'}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, 'left', None), 'deadline': 13, 't': 7, 'action': 'left', 'reward': 1.3170200722726115, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, 'left', None)
+Agent drove left instead of forward. (rewarded 1.32)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (8, 3), heading: (-1, 0), action: left, reward: 1.47738508851
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': 'forward'}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, 'forward', 'forward'), 'deadline': 12, 't': 8, 'action': 'left', 'reward': 1.4773850885052702, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, 'forward', 'forward')
+Agent drove left instead of right. (rewarded 1.48)
+55% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (8, 2), heading: (0, -1), action: right, reward: 0.21013059782
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 11, 't': 9, 'action': 'right', 'reward': 0.21013059781997612, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent drove right instead of left. (rewarded 0.21)
+50% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (8, 2), heading: (0, -1), action: forward, reward: -40.733307059
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'right', 'left': 'forward'}, 'violation': 4, 'light': 'red', 'state': ('right', 'red', None, 'forward', 'right'), 'deadline': 10, 't': 10, 'action': 'forward', 'reward': -40.73330705903937, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'forward', 'right')
+Agent attempted driving forward through a red light with traffic and cause a major accident. (rewarded -40.73)
+45% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (7, 2), heading: (-1, 0), action: left, reward: 1.57723409967
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', None, None, None), 'deadline': 9, 't': 11, 'action': 'left', 'reward': 1.577234099667584, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', None, None, None)
+Agent drove left instead of right. (rewarded 1.58)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (7, 3), heading: (0, 1), action: left, reward: 1.06169238106
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'right', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, None, 'right'), 'deadline': 8, 't': 12, 'action': 'left', 'reward': 1.0616923810597247, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, 'right')
+Agent drove left instead of forward. (rewarded 1.06)
+35% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (7, 3), heading: (0, 1), action: None, reward: 1.22889722365
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': 'left'}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, 'left', 'left'), 'deadline': 7, 't': 13, 'action': None, 'reward': 1.2288972236478013, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, 'left', 'left')
+Agent properly idled at a red light. (rewarded 1.23)
+30% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (6, 3), heading: (-1, 0), action: right, reward: 0.806278672526
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('right', 'red', None, None, None), 'deadline': 6, 't': 14, 'action': 'right', 'reward': 0.8062786725256748, 'waypoint': 'right'}
+Agent previous state: ('right', 'red', None, None, None)
+Agent followed the waypoint right. (rewarded 0.81)
+25% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (5, 3), heading: (-1, 0), action: forward, reward: 1.9661593336
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, None, 'forward'), 'deadline': 5, 't': 15, 'action': 'forward', 'reward': 1.9661593336016636, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, 'forward')
+Agent followed the waypoint forward. (rewarded 1.97)
+20% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (5, 3), heading: (-1, 0), action: left, reward: -10.2965741525
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 4, 't': 16, 'action': 'left', 'reward': -10.296574152497064, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -10.30)
+15% of time remaining to reach destination.
+
+/-------------------
+| Step 17 Results
+\-------------------
+
+Environment.step(): t = 17
+Environment.act() [POST]: location: (5, 3), heading: (-1, 0), action: left, reward: -39.7439241912
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'forward', 'left': None}, 'violation': 4, 'light': 'red', 'state': ('forward', 'red', None, None, 'forward'), 'deadline': 3, 't': 17, 'action': 'left', 'reward': -39.743924191248446, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, 'forward')
+Agent attempted driving left through a red light with traffic and cause a major accident. (rewarded -39.74)
+10% of time remaining to reach destination.
+
+/-------------------
+| Step 18 Results
+\-------------------
+
+Environment.step(): t = 18
+Environment.act() [POST]: location: (5, 3), heading: (-1, 0), action: None, reward: 0.509487064088
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 2, 't': 18, 'action': None, 'reward': 0.5094870640877049, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent properly idled at a red light. (rewarded 0.51)
+5% of time remaining to reach destination.
+
+/-------------------
+| Step 19 Results
+\-------------------
+
+Environment.step(): t = 19
+Environment.act() [POST]: location: (5, 2), heading: (0, -1), action: right, reward: -0.373559706478
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, None, None), 'deadline': 1, 't': 19, 'action': 'right', 'reward': -0.3735597064779884, 'waypoint': 'forward'}
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Agent previous state: ('forward', 'green', None, None, None)
+Agent drove right instead of forward. (rewarded -0.37)
+0% of time remaining to reach destination.
+
+Trial Aborted!
+Agent did not reach the destination.
+
+/-------------------------
+| Training trial 13
+\-------------------------
+
+Environment.reset(): Trial set up with start = (5, 5), destination = (2, 7), deadline = 25
+Simulating trial. . . 
+epsilon = 0.9498; alpha = 0.5000
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
+Environment.act() [POST]: location: (6, 5), heading: (1, 0), action: forward, reward: 0.639961603017
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': 'left', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('right', 'green', 'left', None, 'left'), 'deadline': 25, 't': 0, 'action': 'forward', 'reward': 0.6399616030167441, 'waypoint': 'right'}
+Agent previous state: ('right', 'green', 'left', None, 'left')
+Agent drove forward instead of right. (rewarded 0.64)
+96% of time remaining to reach destination.
+
+/-------------------
+| Step 1 Results
+\-------------------
+
+Environment.step(): t = 1
+Environment.act() [POST]: location: (6, 5), heading: (1, 0), action: forward, reward: -10.0784141572
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 24, 't': 1, 'action': 'forward', 'reward': -10.078414157201994, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent attempted driving forward through a red light. (rewarded -10.08)
+92% of time remaining to reach destination.
+
+/-------------------
+| Step 2 Results
+\-------------------
+
+Environment.step(): t = 2
+Environment.act() [POST]: location: (6, 5), heading: (1, 0), action: left, reward: -9.93497066085
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 23, 't': 2, 'action': 'left', 'reward': -9.934970660846172, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -9.93)
+88% of time remaining to reach destination.
+
+/-------------------
+| Step 3 Results
+\-------------------
+
+Environment.step(): t = 3
+Environment.act() [POST]: location: (6, 6), heading: (0, 1), action: right, reward: 0.66642696023
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, None, None), 'deadline': 22, 't': 3, 'action': 'right', 'reward': 0.6664269602299155, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, None)
+Agent drove right instead of forward. (rewarded 0.67)
+84% of time remaining to reach destination.
+
+/-------------------
+| Step 4 Results
+\-------------------
+
+Environment.step(): t = 4
+Environment.act() [POST]: location: (6, 6), heading: (0, 1), action: None, reward: -4.21978839355
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': 'right'}, 'violation': 1, 'light': 'green', 'state': ('left', 'green', None, 'right', None), 'deadline': 21, 't': 4, 'action': None, 'reward': -4.219788393546956, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', None, 'right', None)
+Agent idled at a green light with no oncoming traffic. (rewarded -4.22)
+80% of time remaining to reach destination.
+
+/-------------------
+| Step 5 Results
+\-------------------
+
+Environment.step(): t = 5
+Environment.act() [POST]: location: (6, 6), heading: (0, 1), action: left, reward: -9.51680158296
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'right', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', None, None, 'right'), 'deadline': 20, 't': 5, 'action': 'left', 'reward': -9.516801582963438, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, 'right')
+Agent attempted driving left through a red light. (rewarded -9.52)
+76% of time remaining to reach destination.
+
+/-------------------
+| Step 6 Results
+\-------------------
+
+Environment.step(): t = 6
+Environment.act() [POST]: location: (6, 6), heading: (0, 1), action: left, reward: -10.6256550106
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': None, 'left': None}, 'violation': 2, 'light': 'red', 'state': ('left', 'red', None, None, None), 'deadline': 19, 't': 6, 'action': 'left', 'reward': -10.625655010647431, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', None, None, None)
+Agent attempted driving left through a red light. (rewarded -10.63)
+72% of time remaining to reach destination.
+
+/-------------------
+| Step 7 Results
+\-------------------
+
+Environment.step(): t = 7
+Environment.act() [POST]: location: (6, 6), heading: (0, 1), action: None, reward: 0.940489431644
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', 'left', None, None), 'deadline': 18, 't': 7, 'action': None, 'reward': 0.9404894316437613, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'left', None, None)
+Agent properly idled at a red light. (rewarded 0.94)
+68% of time remaining to reach destination.
+
+/-------------------
+| Step 8 Results
+\-------------------
+
+Environment.step(): t = 8
+Environment.act() [POST]: location: (5, 6), heading: (-1, 0), action: right, reward: 1.45055912631
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': 'right'}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', 'left', 'right', None), 'deadline': 17, 't': 8, 'action': 'right', 'reward': 1.4505591263068665, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'left', 'right', None)
+Agent drove right instead of left. (rewarded 1.45)
+64% of time remaining to reach destination.
+
+/-------------------
+| Step 9 Results
+\-------------------
+
+Environment.step(): t = 9
+Environment.act() [POST]: location: (5, 6), heading: (-1, 0), action: None, reward: -5.59190494148
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 1, 'light': 'green', 'state': ('forward', 'green', None, None, 'left'), 'deadline': 16, 't': 9, 'action': None, 'reward': -5.591904941476655, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, 'left')
+Agent idled at a green light with no oncoming traffic. (rewarded -5.59)
+60% of time remaining to reach destination.
+
+/-------------------
+| Step 10 Results
+\-------------------
+
+Environment.step(): t = 10
+Environment.act() [POST]: location: (5, 6), heading: (-1, 0), action: forward, reward: -10.8960231336
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'left', 'left': None}, 'violation': 2, 'light': 'red', 'state': ('forward', 'red', None, None, 'left'), 'deadline': 15, 't': 10, 'action': 'forward', 'reward': -10.89602313359707, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, 'left')
+Agent attempted driving forward through a red light. (rewarded -10.90)
+56% of time remaining to reach destination.
+
+/-------------------
+| Step 11 Results
+\-------------------
+
+Environment.step(): t = 11
+Environment.act() [POST]: location: (5, 5), heading: (0, -1), action: right, reward: 0.58836228981
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': None, 'right': 'right', 'left': None}, 'violation': 0, 'light': 'red', 'state': ('forward', 'red', None, None, 'right'), 'deadline': 14, 't': 11, 'action': 'right', 'reward': 0.5883622898095903, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'red', None, None, 'right')
+Agent drove right instead of forward. (rewarded 0.59)
+52% of time remaining to reach destination.
+
+/-------------------
+| Step 12 Results
+\-------------------
+
+Environment.step(): t = 12
+Environment.act() [POST]: location: (5, 5), heading: (0, -1), action: None, reward: 2.2610805361
+Environment.act(): Step data: {'inputs': {'light': 'red', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'red', 'state': ('left', 'red', 'left', None, None), 'deadline': 13, 't': 12, 'action': None, 'reward': 2.2610805360989894, 'waypoint': 'left'}
+Agent previous state: ('left', 'red', 'left', None, None)
+Agent properly idled at a red light. (rewarded 2.26)
+48% of time remaining to reach destination.
+
+/-------------------
+| Step 13 Results
+\-------------------
+
+Environment.step(): t = 13
+Environment.act() [POST]: location: (5, 5), heading: (0, -1), action: None, reward: 1.24756415019
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'left', 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'left', None, None), 'deadline': 12, 't': 13, 'action': None, 'reward': 1.247564150187221, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'left', None, None)
+Agent idled at a green light with oncoming traffic. (rewarded 1.25)
+44% of time remaining to reach destination.
+
+/-------------------
+| Step 14 Results
+\-------------------
+
+Environment.step(): t = 14
+Environment.act() [POST]: location: (6, 5), heading: (1, 0), action: right, reward: 1.22673806839
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': 'right', 'right': 'forward', 'left': None}, 'violation': 0, 'light': 'green', 'state': ('left', 'green', 'right', None, 'forward'), 'deadline': 11, 't': 14, 'action': 'right', 'reward': 1.2267380683922724, 'waypoint': 'left'}
+Agent previous state: ('left', 'green', 'right', None, 'forward')
+Agent drove right instead of left. (rewarded 1.23)
+40% of time remaining to reach destination.
+
+/-------------------
+| Step 15 Results
+\-------------------
+
+Environment.step(): t = 15
+Environment.act() [POST]: location: (6, 5), heading: (1, 0), action: None, reward: -5.25996640836
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 1, 'light': 'green', 'state': ('forward', 'green', None, None, None), 'deadline': 10, 't': 15, 'action': None, 'reward': -5.259966408356347, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, None)
+Agent idled at a green light with no oncoming traffic. (rewarded -5.26)
+36% of time remaining to reach destination.
+
+/-------------------
+| Step 16 Results
+\-------------------
+
+Environment.step(): t = 16
+Environment.act() [POST]: location: (7, 5), heading: (1, 0), action: forward, reward: 0.907127014187
+Environment.act(): Step data: {'inputs': {'light': 'green', 'oncoming': None, 'right': None, 'left': None}, 'violation': 0, 'light': 'green', 'state': ('forward', 'green', None, None, None), 'deadline': 9, 't': 16, 'action': 'forward', 'reward': 0.9071270141870704, 'waypoint': 'forward'}
+Agent previous state: ('forward', 'green', None, None, None)
+Agent followed the waypoint forward. (rewarded 0.91)
+32% of time remaining to reach destination.
+
+Simulation ended. . . 
