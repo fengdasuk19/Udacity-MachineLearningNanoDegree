@@ -1,0 +1,14 @@
+
+/-------------------------
+| Training trial 1
+\-------------------------
+
+Environment.reset(): Trial set up with start = (1, 7), destination = (4, 3), deadline = 25
+Simulating trial. . . 
+epsilon = 1.0000; alpha = 0.9983
+
+/-------------------
+| Step 0 Results
+\-------------------
+
+Environment.step(): t = 0
