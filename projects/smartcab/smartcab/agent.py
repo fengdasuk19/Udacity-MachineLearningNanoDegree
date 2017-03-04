@@ -58,7 +58,6 @@ class LearningAgent(Agent):
             self.alpha = 0
             #self.log_file.close()
         else:
-            trialFactor = -0.75
             
             # calculate alpha
 #             tempx = np.array([0, 200, 400])
@@ -99,7 +98,8 @@ class LearningAgent(Agent):
             #self.epsilon = 2.250e-05 * np.power(self.trial, 2) + -0.009 * self.trial + 1
             #self.epsilon = math.pow(0.8, self.trial)
             
-            if (self.trial <= 500):#(self.epsilon >= 0.1):
+            
+            # if ....
                 #tempx = np.array([0, 300, 400]) #([0, -400, 400]) #
                 #tempy = np.array([1.0, 0.2,  0.1]) #([1.0, 0.1,  0.1])#
                 
@@ -107,11 +107,17 @@ class LearningAgent(Agent):
                 #tempy = np.array([1.0, 0.5,  0.1])
                 #coef = np.polyfit(tempx, tempy, 2)
                 #self.epsilon = coef[0] * pow(self.trial, 2) + coef[1] * self.trial + coef[2]#coef[0] * np.power(x, 3)  + coef[1] * np.power(x, 2) + coef[2] * x + coef[3] 
-                
-                self.epsilon = 1
-            else:
+            #else:
                 #self.epsilon -= (0.1-0.01)/(500 - 200)
-                self.epsilon = pow(self.trial - 500, trialFactor)
+            
+            #trialFactor = -0.75
+            #self.epsilon = pow(self.trial, trialFactor)
+            self.epsilon = math.exp(-0.01 * self.trial)
+            
+            #if (self.trial <= 500):#(self.epsilon >= 0.1):                
+            #    self.epsilon = 1
+            #else:
+            #    self.epsilon = pow(self.trial - 500, trialFactor)
                                   
         return None
 
@@ -331,7 +337,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=100, tolerance=pow(1500, -0.75))#0.1##1.0/math.sqrt(200)#0.01
+    sim.run(n_test=100, tolerance=math.exp(-0.01 * 2000))#0.1##1.0/math.sqrt(200)#0.01#pow(2000, -0.75)
 
 
 if __name__ == '__main__':
