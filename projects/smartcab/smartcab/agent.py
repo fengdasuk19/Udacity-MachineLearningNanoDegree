@@ -112,12 +112,14 @@ class LearningAgent(Agent):
             
             #trialFactor = -0.75
             #self.epsilon = pow(self.trial, trialFactor)
+            
             self.epsilon = math.exp(-0.01 * self.trial)
             
             #if (self.trial <= 500):#(self.epsilon >= 0.1):                
             #    self.epsilon = 1
             #else:
-            #    self.epsilon = pow(self.trial - 500, trialFactor)
+            #    #self.epsilon = pow(self.trial - 1000, trialFactor)
+            #    self.epsilon = math.exp(-0.01 * (self.trial - 500))
                                   
         return None
 
@@ -337,7 +339,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=100, tolerance=math.exp(-0.01 * 2000))#0.1##1.0/math.sqrt(200)#0.01#pow(2000, -0.75)
+    sim.run(n_test=200, tolerance=math.exp(-0.01 * 2000))#0.1##1.0/math.sqrt(200)#0.01#pow(2000, -0.75)
 
 
 if __name__ == '__main__':
