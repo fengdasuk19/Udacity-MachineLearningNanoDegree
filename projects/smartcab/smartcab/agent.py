@@ -56,70 +56,8 @@ class LearningAgent(Agent):
         if testing:
             self.epsilon = 0
             self.alpha = 0
-            #self.log_file.close()
-        else:
-            
-            # calculate alpha
-#             tempx = np.array([0, 200, 400])
-#             tempy = np.array([1.0, 0.7, 0.5]) #([1.0, 0.55, 0.5]) #
-#             coef = np.polyfit(tempx, tempy, 2)
-            
-#             if (self.alpha > 0.5):
-#                 self.alpha = coef[0] * np.power(self.trial, 2) + coef[1] * self.trial + coef[2] 
-#             else:
-#                 self.alpha = 0.5
-                
-            #self.alpha = 0.5 + pow(0.5, self.trial + 1)
-            
-            # calculate epsilon
-#             tempx = np.array([0, 50, 400])
-#             tempy = np.array([1.0, 0.5, 0.0099]) #([1.0, 0.55, 0.5]) #
-#             coef = np.polyfit(tempx, tempy, 2)
-            
-#             self.epsilon = coef[0] * np.power(self.trial, 2) + coef[1] * self.trial + coef[2] 
-            
-#             tempx = np.array([0, 70, 300, 400])
-#             tempy = np.array([1.0, 0.5, 0.12, 0.0099])
-#             coef = np.polyfit(tempx, tempy, 3)
-#             self.epsilon = coef[0] * np.power(self.trial, 3)  + coef[1] * np.power(self.trial, 2) + coef[2] * self.trial + coef[3] 
-            
-#             self.epsilon = pow(self.trial, -0.7)
-            
-            # tempx = np.array([0, 70, 100, 400])
-            # tempy = np.array([1.0, 0.7, 0.63, 0.1])
-            
-
-#             tempx = np.array([0, 100, 200])
-#             tempy = np.array([1.0, 0.7,  0.3])
-#             coef = np.polyfit(tempx, tempy, 2)
-#             self.epsilon = coef[0] * pow(self.trial, 2) + coef[1] * self.trial + coef[2]
-            
-            #self.epsilon =2.0025e-05 * np.power(self.trial, 2) + -8.51e-03 * self.trial  + 1
-            #self.epsilon = 2.250e-05 * np.power(self.trial, 2) + -0.009 * self.trial + 1
-            #self.epsilon = math.pow(0.8, self.trial)
-            
-            
-            # if ....
-                #tempx = np.array([0, 300, 400]) #([0, -400, 400]) #
-                #tempy = np.array([1.0, 0.2,  0.1]) #([1.0, 0.1,  0.1])#
-                
-                #tempx = np.array([0, 100, 200])
-                #tempy = np.array([1.0, 0.5,  0.1])
-                #coef = np.polyfit(tempx, tempy, 2)
-                #self.epsilon = coef[0] * pow(self.trial, 2) + coef[1] * self.trial + coef[2]#coef[0] * np.power(x, 3)  + coef[1] * np.power(x, 2) + coef[2] * x + coef[3] 
-            #else:
-                #self.epsilon -= (0.1-0.01)/(500 - 200)
-            
-            #trialFactor = -0.75
-            #self.epsilon = pow(self.trial, trialFactor)
-            
+        else:           
             self.epsilon = math.exp(-0.01 * self.trial)
-            
-            #if (self.trial <= 500):#(self.epsilon >= 0.1):                
-            #    self.epsilon = 1
-            #else:
-            #    #self.epsilon = pow(self.trial - 1000, trialFactor)
-            #    self.epsilon = math.exp(-0.01 * (self.trial - 500))
                                   
         return None
 
@@ -166,7 +104,7 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
-        if not (state in self.Q):
+        if self.learning and (not (state in self.Q)):
             self.Q[state] = {theAction:0.0 for theAction in self.valid_actions}
 
         return
@@ -188,15 +126,9 @@ class LearningAgent(Agent):
         # When learning, choose a random action with 'epsilon' probability
         #   Otherwise, choose an action with the highest Q-value for the current state
         
-        
         randResult = random.random()
         maxQ = self.get_maxQ(state)
-        #zeroAction = [theAction for theAction, Qvalue in self.Q[state].items() if 0 == Qvalue]
-        
-#         if self.env.trial_data['testing']:
-            
-#             actList = [theAction for theAction, value in self.Q[state].items() if value == maxQ]
-#             action = np.random.choice(actList)
+
         print "state"
         print self.Q[state]
         if self.env.trial_data['testing']:
@@ -209,10 +141,6 @@ class LearningAgent(Agent):
             print "not learning:"
             action = np.random.choice(self.valid_actions)
             print "random choice: {}".format(action)
-    
-#         elif zeroAction.count(0) >= 1: # from > to >=
-            
-#             action = np.random.choice(zeroAction)
         
         elif (randResult < self.epsilon):
             
@@ -252,7 +180,29 @@ class LearningAgent(Agent):
         
         return
 
-    def logger(self, state, action, reward, Q_before, Q_after):
+    def learnerWithLogger(self, learner, *args):
+        # get args
+        (state, action, reward) = args
+        # get Q before learning
+        Q_before = {}
+        for k, v in self.Q[state].items():
+            if isinstance(v, float):
+                Q_before[k] = "{:.2f}".format(v)
+            else:
+                Q_before[k] = v
+        
+        # run learner
+        learner(state, action, reward)
+        
+        # get Q after learning
+        Q_after = {}
+        for k, v in self.Q[state].items():
+            if isinstance(v, float):
+                Q_after[k] = "{:.2f}".format(v)
+            else:
+                Q_after[k] = v
+        
+        # write info into logs
         with open(self.log_filename, 'a') as self.log_file:
             self.log_fields = ['trial', 'testing', 'state', 'action', 'reward', 'Q_before', 'Q_after']
             self.log_writer = csv.DictWriter(self.log_file, fieldnames=self.log_fields)
@@ -267,7 +217,7 @@ class LearningAgent(Agent):
             })
         
         return
-
+    
     def update(self):
         """ The update function is called when a time step is completed in the 
             environment for a given trial. This function will build the agent
@@ -277,25 +227,8 @@ class LearningAgent(Agent):
         self.createQ(state)                 # Create 'state' in Q-table
         action = self.choose_action(state)  # Choose an action
         reward = self.env.act(self, action) # Receive a reward
-
-#         if (False == self.env.trial_data['testing']):
+        self.learnerWithLogger(self.learn, state, action, reward)   # Q-learn
         
-        Q_before = {}
-        for k, v in self.Q[state].items():
-            if isinstance(v, float):
-                Q_before[k] = "{:.2f}".format(v)
-            else:
-                Q_before[k] = v
-        self.learn(state, action, reward)   # Q-learn
-        Q_after = {}
-        for k, v in self.Q[state].items():
-            if isinstance(v, float):
-                Q_after[k] = "{:.2f}".format(v)
-            else:
-                Q_after[k] = v
-
-        self.logger(state, action, reward, Q_before, Q_after)
-
         return
         
 
@@ -339,7 +272,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=200, tolerance=math.exp(-0.01 * 2000))#0.1##1.0/math.sqrt(200)#0.01#pow(2000, -0.75)
+    sim.run(n_test=200, tolerance=math.exp(-0.01 * 2000))
 
 
 if __name__ == '__main__':
