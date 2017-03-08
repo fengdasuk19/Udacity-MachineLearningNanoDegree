@@ -104,7 +104,7 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
-        if self.learning and (not (state in self.Q)):
+        if self.learning and (state not in self.Q):
             self.Q[state] = {theAction:0.0 for theAction in self.valid_actions}
 
         return
@@ -129,8 +129,6 @@ class LearningAgent(Agent):
         randResult = random.random()
         maxQ = self.get_maxQ(state)
 
-        print "state"
-        print self.Q[state]
         if self.env.trial_data['testing']:
             
             actList = [theAction for theAction, value in self.Q[state].items() if value == maxQ]
@@ -138,29 +136,20 @@ class LearningAgent(Agent):
         
         elif not self.learning:
         
-            print "not learning:"
             action = np.random.choice(self.valid_actions)
-            print "random choice: {}".format(action)
         
         elif (randResult < self.epsilon):
             
-            print "learning, learn new"
             zeroAction = [theAction for theAction, Qvalue in self.Q[state].items() if 0 == Qvalue]
-            print "zeroAction: {}".format(zeroAction)
             if len(zeroAction) >= 1: 
                 action = np.random.choice(zeroAction)
-                print "in zeroAction choose: {}".format(action)
             else:
                 action = np.random.choice(self.valid_actions)
-                print "in random choose: {}".format(action)
             
         else:
 
-            print "learning, choose max:"
             actList = [theAction for theAction, value in self.Q[state].items() if value == maxQ]
             action = np.random.choice(actList)
-            
-        print "At last we choose: {}".format(action)    
             
         return action
 
