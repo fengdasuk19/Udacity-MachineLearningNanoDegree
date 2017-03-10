@@ -47,3 +47,7 @@ Note (m.u.) is shorthand for *monetary units*.
 6) `Delicatessen`: annual spending (m.u.) on and delicatessen products (Continuous); 
 7) `Channel`: {Hotel/Restaurant/Cafe - 1, Retail - 2} (Nominal)
 8) `Region`: {Lisnon - 1, Oporto - 2, or Other - 3} (Nominal) 
+
+## Notes
+
+Find the project in: https://github.com/fengdasuk19/Uda-MLND-CustomerSegments

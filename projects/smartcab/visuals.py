@@ -160,6 +160,7 @@ def plot_trials(csv):
 	
 	ax.legend(loc='upper right', fancybox=True, fontsize=10)
 
+
 	###############
 	### Rolling Success-Rate plot
 	###############
@@ -204,12 +205,3 @@ def plot_trials(csv):
 
 	plt.tight_layout()
 	plt.show()
-    
-	###############
-	### Bad Actions Data Print
-	###############
-    
-	print "Frequency of TotalBadActions: {}".format(np.mean((1 - actions['good'])))
-	print "Accidents(Minor + Major) / TotalBadActions: {}".format(
-	    (np.sum(actions['minor_acc'] + actions['major_acc'])) / (np.sum(1 - actions['good']))
-	)
